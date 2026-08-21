@@ -443,12 +443,12 @@ details.expansivel > div{padding-top:.7rem}
       </div>
       <div class="cartao lav">
         <h3>Seus dados são seus</h3>
-        <p class="pequeno">Nada do que você escrever ou responder sai do seu dispositivo. Não existe envio, cadastro ou servidor guardando suas respostas. Se quiser, você apaga tudo com um clique no final.</p>
+        <p class="pequeno">Nada do que você escrever ou responder é enviado para lugar nenhum. Não existe cadastro nem servidor guardando suas respostas. No final, se você quiser, existe um botão para levar o resumo para o seu email e mandar para a sua psicóloga, e esse envio só acontece se você mesma apertar enviar. Se preferir, apaga tudo com um clique.</p>
       </div>
     </div>
 
     <div class="aviso-etico" style="margin-top:1.2rem">
-      <strong>Antes de começar:</strong> este é um material psicoeducativo de autoconhecimento, criado pela psicóloga Paula Rodrigues. Não é um teste psicológico validado nem um diagnóstico. Se você está sofrendo em suas relações, a leitura mais confiável do seu funcionamento acontece dentro de um processo de psicoterapia.
+      <strong>Antes de começar:</strong> este é um material psicoeducativo de autoconhecimento, criado pela psicóloga Paula Rodrigues, CRP 02/18022. Não é um teste psicológico validado nem um diagnóstico. Se você está sofrendo em suas relações, a leitura mais confiável do seu funcionamento acontece dentro de um processo de psicoterapia.
     </div>
 
     <div class="navegacao">
@@ -755,7 +755,7 @@ details.expansivel > div{padding-top:.7rem}
         <div id="campos-reflexao"></div>
         <p class="privacidade">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-          <span>Tudo o que você escreve aqui fica salvo apenas no seu navegador, neste dispositivo. Nada é enviado para lugar nenhum e ninguém, nem eu, tem acesso.</span>
+          <span>Tudo o que você escreve aqui fica salvo apenas no seu navegador, neste dispositivo. Nada sai daqui sem uma ação sua, e ninguém, nem eu, tem acesso ao que você escreveu.</span>
         </p>
       </div>
     </div>
@@ -802,7 +802,8 @@ details.expansivel > div{padding-top:.7rem}
       <p>Todas as práticas desta página ajudam. Nenhuma delas, sozinha, faz o que uma relação terapêutica faz. Na psicoterapia acontece exatamente o que o apego precisa para mudar: alguém que escuta com constância, que aguenta o que você traz sem ir embora e que te ajuda a montar sentido no que sempre pareceu só bagunça. É uma base segura para treinar, em tempo real, um jeito novo de se relacionar.</p>
       <p>Se você quer olhar isso com acompanhamento, eu atendo online adultos no Brasil e na Europa.</p>
       <p><a class="btn" href="https://psicoterapiaeafins.com.br" target="_blank" rel="noopener">Conhecer a Psicoterapia e Afins</a></p>
-      <p class="mini" style="margin-top:.8rem">Paula Rodrigues, psicóloga clínica. Atendimento online para adultos.</p>
+      <p class="pequeno" style="margin-top:.6rem">Para falar comigo diretamente: <a href="mailto:paulaebrodrigues@gmail.com" style="color:#FBE7E1">paulaebrodrigues@gmail.com</a></p>
+      <p class="mini" style="margin-top:.8rem">Paula Rodrigues, psicóloga clínica, CRP 02/18022. Atendimento online para adultos.</p>
     </div>
 
     <div class="navegacao">
@@ -830,6 +831,28 @@ details.expansivel > div{padding-top:.7rem}
       <button class="btn btn-acao" id="btn-imprimir" type="button">Baixar meu resumo</button>
     </div>
     <p class="mini texto-suave nao-imprimir" style="margin-top:.6rem">O botão abre a janela de impressão do seu navegador. Escolha "Salvar como PDF" no destino para guardar o arquivo.</p>
+
+    <!-- Envio opcional do resumo por email para a psicóloga -->
+    <div class="cartao teal nao-imprimir" style="margin-top:1.6rem">
+      <h3 style="margin-top:0">Levar meu resumo para a terapia</h3>
+      <p class="pequeno">Se você já faz ou pretende fazer terapia comigo, pode me mandar este resumo antes da sessão. Ele encurta caminho: em vez de gastar o começo do atendimento reconstruindo o mapa, a gente já começa conversando sobre o que apareceu.</p>
+      <label class="check-linha" style="border:none">
+        <input type="checkbox" id="incluir-textos" checked>
+        <span>Incluir também o que eu escrevi nos campos de texto, sobre o ciclo e as reflexões</span>
+      </label>
+      <p style="margin:.9rem 0 0"><a class="btn btn-acao" id="link-email" href="mailto:paulaebrodrigues@gmail.com">Abrir meu email com o resumo</a></p>
+      <p style="margin:.6rem 0 0"><button class="btn btn-secundario" id="btn-copiar" type="button">Copiar o resumo em texto</button></p>
+      <div id="caixa-copia" hidden style="margin-top:.8rem">
+        <label class="pequeno" for="texto-copia" style="display:block;margin-bottom:.3rem;font-weight:500">Selecione o texto abaixo e copie</label>
+        <textarea id="texto-copia" rows="8" readonly style="width:100%;font-family:inherit;font-size:var(--t-peq);padding:.7rem .8rem;border-radius:14px;border:2px solid var(--creme-3)"></textarea>
+      </div>
+      <p class="pequeno" id="aviso-copia" role="status" style="margin:.5rem 0 0"></p>
+      <p class="privacidade" style="margin-top:1rem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <span>Este é o único ponto do recurso em que alguma coisa pode sair do seu dispositivo, e só se você quiser. O botão abre o seu próprio programa de email com a mensagem já escrita, e nada é enviado até você apertar enviar. Vale lembrar que email comum não é um canal sigiloso, então mande apenas o que você se sentir à vontade de compartilhar.</span>
+      </p>
+      <p class="mini texto-suave" style="margin-top:.8rem">Prefere escrever do seu jeito? Meu email é <a href="mailto:paulaebrodrigues@gmail.com">paulaebrodrigues@gmail.com</a>.</p>
+    </div>
 
     <div class="cartao creme" style="margin-top:2rem">
       <h3>Recomeçar do zero</h3>
@@ -866,11 +889,11 @@ details.expansivel > div{padding-top:.7rem}
       <div class="pequeno texto-suave">
         <p>Este recurso tem finalidade exclusivamente psicoeducativa e de autoconhecimento. Ele não realiza diagnóstico, não substitui avaliação psicológica ou psiquiátrica e não constitui atendimento clínico. O questionário do Módulo 3 foi elaborado com itens originais inspirados nas dimensões de ansiedade e evitação descritas na literatura sobre apego adulto, mas não passou por processo de validação psicométrica, não possui normas populacionais brasileiras e seus resultados não têm valor pericial, ocupacional ou clínico.</p>
         <p>Os conteúdos aqui não devem ser usados para rotular terceiros, justificar comportamentos abusivos ou tomar decisões sobre relacionamentos sem apoio profissional. Violência física, sexual, patrimonial ou psicológica não é ciclo de apego: é violência, e pede rede de proteção. No Brasil, você pode acionar a Central de Atendimento à Mulher pelo 180 e, em situações de risco à vida, o 190. Se surgirem pensamentos de morte ou de se machucar, procure o CVV pelo 188, ligação gratuita, 24 horas, ou o CAPS mais próximo.</p>
-        <p>Nenhum dado é coletado, transmitido ou armazenado fora do seu dispositivo. As respostas ficam no armazenamento local do seu navegador e podem ser apagadas por você a qualquer momento pelo botão de recomeçar, ou limpando os dados do site.</p>
+        <p>Nenhum dado é coletado, transmitido ou armazenado fora do seu dispositivo. As respostas ficam no armazenamento local do seu navegador e podem ser apagadas por você a qualquer momento pelo botão de recomeçar, ou limpando os dados do site. A única transmissão possível é a que você mesma iniciar: o botão de enviar o resumo por email apenas abre o seu programa de email com o texto pronto, e a mensagem só sai se você enviar. Email comum trafega sem sigilo garantido, portanto compartilhe apenas o que se sentir à vontade de compartilhar.</p>
       </div>
     </details>
 
-    <p class="mini texto-suave" style="margin-top:1.6rem">Conteúdo, redação e desenvolvimento: <strong>Paula Rodrigues</strong>, psicóloga clínica, CRP ativo. Psicoterapia e Afins, atendimento online para adultos no Brasil e na Europa. Uso livre para fins pessoais e educativos, com crédito.</p>
+    <p class="mini texto-suave" style="margin-top:1.6rem">Conteúdo, redação e desenvolvimento: <strong>Paula Rodrigues</strong>, psicóloga clínica, CRP 02/18022. Psicoterapia e Afins, atendimento online para adultos no Brasil e na Europa. Uso livre para fins pessoais e educativos, com crédito.</p>
   </div>
 </footer>
 
@@ -1928,6 +1951,7 @@ function montarResumo(){
     'Estratégias podem ser atualizadas. É disso que a psicoterapia trata.</p></div>';
 
   alvo.innerHTML = html;
+  atualizarLinkEmail();
 }
 
 /* ============================================================
@@ -1975,7 +1999,7 @@ function montarAreaImpressao(){
 
   html += '<div class="rodape-imp"><p>Este material é psicoeducativo e de autoconhecimento. Não é um teste psicológico validado, não realiza diagnóstico e não substitui avaliação ou acompanhamento profissional. '+
     'Baseado no trabalho de Bowlby, Ainsworth, Main e Solomon, Hazan e Shaver, Bartholomew e Horowitz, Fraley e colaboradores, Mikulincer e Shaver, Sue Johnson e Paul Gilbert.</p>'+
-    '<p>Paula Rodrigues, psicóloga clínica. Psicoterapia e Afins, atendimento online para adultos no Brasil e na Europa.</p></div>';
+    '<p>Paula Rodrigues, psicóloga clínica, CRP 02/18022. Psicoterapia e Afins, atendimento online para adultos no Brasil e na Europa. Contato: paulaebrodrigues@gmail.com</p></div>';
 
   $('#area-impressao').innerHTML = html;
 }
@@ -1983,6 +2007,149 @@ function montarAreaImpressao(){
 $('#btn-imprimir').addEventListener('click', function(){
   montarAreaImpressao();
   window.print();
+});
+
+/* ============================================================
+   12b. ENVIAR O RESUMO POR EMAIL PARA A PSICOLOGA
+   Nada e enviado pelo recurso: montamos um link mailto e quem
+   dispara a mensagem e a propria pessoa, no programa de email dela.
+   ============================================================ */
+var EMAIL_PSICOLOGA = 'paulaebrodrigues@gmail.com';
+var ASSUNTO_EMAIL = 'Meu resumo do recurso sobre apego';
+/* limite conservador para o tamanho da URL mailto, que alguns programas de
+   email cortam por volta de 2000 caracteres. o texto copiado nao tem limite. */
+var LIMITE_URL = 1900;
+
+var ROTULO_PAPEL = {
+  persigo:'Costumo ir atrás: cobro, insisto, preciso resolver na hora.',
+  afasto:'Costumo me recolher: fico quieto(a), saio, deixo para depois.',
+  ambos:'Alterno entre perseguir e me afastar, depende do dia.',
+  'nao-sei':'Ainda não sei identificar o meu movimento.'
+};
+
+/* monta o resumo em blocos, do mais importante para o mais dispensavel:
+   o que a pessoa escreveu vem antes da lista de praticas, para nunca ser
+   o primeiro a ser cortado quando o email precisa encolher */
+function blocosResumo(incluirTextos){
+  var r = estado.resultado, p = progressoPraticas();
+  var L = [];
+  L.push('Resumo da jornada sobre apego, do recurso da Psicoterapia e Afins.');
+  L.push('Gerado em ' + new Date().toLocaleDateString('pt-BR') + '.');
+  L.push('');
+  if(r){
+    L.push('MEU ESTILO PREDOMINANTE');
+    L.push(NOMES[r.estilo]);
+    L.push('Ansiedade de apego: ' + r.ansiedade + ' em 100, faixa ' + faixa(r.ansiedade) + '.');
+    L.push('Evitação de apego: ' + r.evitacao + ' em 100, faixa ' + faixa(r.evitacao) + '.');
+    if(pertoDoCentro(r)) L.push('Observação: pelo menos um escore ficou perto da fronteira entre quadrantes.');
+  } else {
+    L.push('Ainda não respondi o questionário do Módulo 3.');
+  }
+  if(estado.relacao.status){
+    L.push('');
+    L.push('MINHA SITUAÇÃO');
+    L.push(estado.relacao.status === 'em' ? 'Estou em um relacionamento.' : 'Não estou em uma relação agora.');
+    if(estado.relacao.papel) L.push(ROTULO_PAPEL[estado.relacao.papel]);
+  }
+
+  var E = [];
+  if(incluirTextos){
+    var rotC = ROTULOS_CICLO[estado.relacao.status || 'em'];
+    if(estado.relacao.ciclo.some(function(t){ return t && t.trim(); })){
+      E.push(''); E.push('O CICLO QUE EU IDENTIFIQUEI');
+      estado.relacao.ciclo.forEach(function(t, i){
+        if(t && t.trim()) E.push(rotC[i].split('.')[0] + ': ' + t.trim());
+      });
+    }
+    /* no email os rotulos vao encurtados, para a leitura ficar limpa */
+    var rotR = ['O que eu mais preciso ouvir e ainda não consegui pedir',
+                'O que eu faço que ativa o medo da outra pessoa'];
+    if(estado.relacao.reflexao.some(function(t){ return t && t.trim(); })){
+      E.push(''); E.push('MINHAS REFLEXÕES');
+      estado.relacao.reflexao.forEach(function(t, i){
+        if(t && t.trim()) E.push(rotR[i] + ': ' + t.trim());
+      });
+    }
+  }
+
+  var plano = praticasDoPlano();
+  var feitas = plano.filter(function(pr){ return estado.praticas.feitas[pr.id]; });
+  var curto = ['', 'PRÁTICAS DA SEMANA', p.feitas + ' de ' + p.total + ' marcadas.'];
+  if(feitas.length) curto.push('Concluídas: ' + feitas.map(function(pr){ return pr.titulo; }).join('; ') + '.');
+  var longo = ['', 'PRÁTICAS DA SEMANA (' + p.feitas + ' de ' + p.total + ')'];
+  plano.forEach(function(pr){
+    longo.push((estado.praticas.feitas[pr.id] ? '[x] ' : '[ ] ') + pr.titulo + ': ' + pr.tarefa);
+  });
+
+  /* cada bloco comeca com uma quebra extra, para haver linha em branco entre eles */
+  return {
+    base:L.join('\n'),
+    escritos:E.length ? '\n' + E.join('\n') : '',
+    praticasCurto:'\n' + curto.join('\n'),
+    praticasLongo:'\n' + longo.join('\n')
+  };
+}
+
+/* versao completa, sem cortes, usada no botao de copiar */
+function textoResumoCompleto(incluirTextos){
+  var b = blocosResumo(incluirTextos);
+  return b.base + b.escritos + b.praticasLongo;
+}
+
+function urlMailto(texto){
+  return 'mailto:' + EMAIL_PSICOLOGA + '?subject=' + encodeURIComponent(ASSUNTO_EMAIL) + '&body=' + encodeURIComponent(texto);
+}
+
+/* versao ajustada ao limite da URL: primeiro encolhe a lista de praticas,
+   depois, se ainda faltar espaco, corta o final dos textos escritos */
+function textoResumoEmail(incluirTextos){
+  var b = blocosResumo(incluirTextos);
+  var tentativas = [ b.base + b.escritos + b.praticasLongo, b.base + b.escritos + b.praticasCurto ];
+  for(var i=0;i<tentativas.length;i++){
+    if(urlMailto(tentativas[i]).length <= LIMITE_URL) return tentativas[i];
+  }
+  var nota = '\n\n[Texto encurtado para caber no email. Levo a versão completa em PDF para a sessão.]';
+  var corte = b.escritos;
+  while(corte.length > 40){
+    corte = corte.slice(0, Math.floor(corte.length * 0.8));
+    var t = b.base + corte + nota + b.praticasCurto;
+    if(urlMailto(t).length <= LIMITE_URL) return t;
+  }
+  return b.base + nota + b.praticasCurto;
+}
+
+function atualizarLinkEmail(){
+  var link = $('#link-email');
+  if(!link) return;
+  var incluir = $('#incluir-textos') ? $('#incluir-textos').checked : true;
+  link.href = urlMailto(textoResumoEmail(incluir));
+}
+
+var elIncluir = $('#incluir-textos');
+if(elIncluir) elIncluir.addEventListener('change', atualizarLinkEmail);
+
+var elCopiar = $('#btn-copiar');
+if(elCopiar) elCopiar.addEventListener('click', function(){
+  var incluir = $('#incluir-textos') ? $('#incluir-textos').checked : true;
+  var texto = textoResumoCompleto(incluir);
+  var aviso = $('#aviso-copia');
+  function mostrarCaixa(){
+    /* plano B: exibe o texto para copiar na mão, útil quando o navegador
+       bloqueia a área de transferência dentro de iframe */
+    var caixa = $('#caixa-copia');
+    caixa.hidden = false;
+    var ta = $('#texto-copia');
+    ta.value = texto;
+    ta.focus(); ta.select();
+    aviso.textContent = 'Selecione o texto acima e copie com Ctrl+C ou Command+C.';
+  }
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(texto).then(function(){
+      aviso.textContent = 'Resumo copiado. Agora é só colar onde você quiser.';
+    }, mostrarCaixa);
+  } else {
+    mostrarCaixa();
+  }
 });
 
 /* ============================================================
