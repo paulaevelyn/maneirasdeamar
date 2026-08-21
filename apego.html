@@ -1,0 +1,2031 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teste de Estilo de Apego: descubra o seu e construa apego seguro | Psicoterapia e Afins</title>
+<meta name="description" content="Jornada interativa e gratuita sobre teoria do apego: entenda os quatro tipos de apego adulto, descubra seu estilo predominante em um questionario de autorreflexao e receba um plano pratico para construir apego seguro.">
+<meta name="author" content="Paula Rodrigues | Psicoterapia e Afins">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Teste de Estilo de Apego: descubra o seu e construa apego seguro">
+<meta property="og:description" content="Entenda os quatro estilos de apego adulto, descubra o seu e receba um plano pratico de seguranca conquistada. Recurso gratuito da Psicoterapia e Afins.">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   TOKENS VISUAIS  -  Psicoterapia e Afins
+   Altere apenas aqui para mudar a identidade do recurso inteiro.
+   ============================================================ */
+:root{
+  /* Paleta */
+  --creme:#FAF5EE;          /* fundo geral */
+  --creme-2:#F3EADF;        /* faixas e cartoes alternados */
+  --creme-3:#EFE3D4;        /* bordas suaves sobre creme */
+  --teal:#14514E;           /* cor estrutural, titulos, botao primario */
+  --teal-claro:#2E7C77;     /* bordas, icones, hover */
+  --teal-fundo:#E2EFED;     /* fundo leve de teal */
+  --salmao:#E98A7A;         /* acento emocional, preenchimentos, blobs */
+  --salmao-forte:#B94A35;   /* texto e botao de acao (contraste AA) */
+  --salmao-fundo:#FBE7E1;   /* fundo leve de salmao */
+  --lavanda:#C7BFE3;        /* elementos secundarios e estados */
+  --lavanda-forte:#6B5CA5;  /* texto e foco lavanda (contraste AA) */
+  --lavanda-fundo:#EDE8F7;  /* fundo leve de lavanda */
+  --tinta:#2A2320;          /* corpo de texto */
+  --tinta-suave:#5B514C;    /* texto auxiliar */
+
+  /* Tipografia */
+  --fonte-titulo:'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --fonte-corpo:'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+
+  /* Escala fluida */
+  --t-mega:clamp(2rem, 1.4rem + 3vw, 3.4rem);
+  --t-h1:clamp(1.8rem, 1.3rem + 2.4vw, 2.8rem);
+  --t-h2:clamp(1.45rem, 1.15rem + 1.4vw, 2.1rem);
+  --t-h3:clamp(1.15rem, 1.03rem + 0.6vw, 1.4rem);
+  --t-corpo:clamp(1rem, 0.97rem + 0.18vw, 1.08rem);
+  --t-peq:0.9rem;
+  --t-mini:0.8rem;
+
+  /* Espaco e forma */
+  --gap:clamp(1rem, 0.7rem + 1.4vw, 1.8rem);
+  --raio:22px;
+  --raio-org:26px 26px 26px 8px;   /* forma organica assimetrica */
+  --sombra:0 6px 26px rgba(20,81,78,.08);
+  --sombra-forte:0 10px 34px rgba(20,81,78,.14);
+  --largura:min(100% - 2rem, 62rem);
+  --transicao:220ms cubic-bezier(.22,.61,.36,1);
+}
+
+/* ---------- Base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}   /* garante que o atributo hidden vença as regras de display dos componentes */
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--creme); color:var(--tinta);
+  font-family:var(--fonte-corpo); font-size:var(--t-corpo); line-height:1.62;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:var(--fonte-titulo); color:var(--teal); line-height:1.15; margin:0 0 .5em; font-weight:600; letter-spacing:.2px}
+h1{font-size:var(--t-h1)} h2{font-size:var(--t-h2)} h3{font-size:var(--t-h3); line-height:1.25}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+strong{font-weight:700; color:var(--teal)}
+em{font-style:italic}
+a{color:var(--salmao-forte)}
+a:hover{color:var(--teal)}
+ul,ol{margin:0 0 1em; padding-left:1.25em}
+li{margin-bottom:.4em}
+img,svg{max-width:100%}
+:focus-visible{outline:3px solid var(--lavanda-forte); outline-offset:3px; border-radius:6px}
+
+.container{width:var(--largura); margin-inline:auto}
+.centro{text-align:center}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.texto-suave{color:var(--tinta-suave)}
+.pequeno{font-size:var(--t-peq)}
+.mini{font-size:var(--t-mini)}
+.destaque-teal{color:var(--teal)}
+.destaque-salmao{color:var(--salmao-forte)}
+
+/* ---------- Blobs de fundo (assinatura visual) ---------- */
+.blobs{position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden}
+.blobs svg{position:absolute; opacity:.5}
+.blob-1{top:-8vh; right:-14vw; width:58vw; max-width:520px}
+.blob-2{bottom:-10vh; left:-18vw; width:64vw; max-width:560px}
+.blob-3{top:38vh; left:52vw; width:34vw; max-width:280px; opacity:.35!important}
+
+/* ---------- Barra de progresso ---------- */
+.topo{
+  position:sticky; top:0; z-index:20; background:rgba(250,245,238,.92);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--creme-3);
+}
+.topo-interno{width:var(--largura); margin-inline:auto; padding:.6rem 0 .55rem}
+.topo-linha{display:flex; align-items:center; justify-content:space-between; gap:.75rem; flex-wrap:wrap}
+.marca{font-family:var(--fonte-titulo); font-size:1.05rem; color:var(--teal); font-weight:600; letter-spacing:.3px}
+.marca span{display:block; font-family:var(--fonte-corpo); font-size:var(--t-mini); color:var(--tinta-suave); letter-spacing:.06em; text-transform:uppercase; font-weight:500}
+.etapa-rotulo{font-size:var(--t-mini); color:var(--tinta-suave); letter-spacing:.05em; text-transform:uppercase; font-weight:500}
+.trilho{height:7px; background:var(--creme-3); border-radius:99px; margin-top:.5rem; overflow:hidden}
+.trilho-preenchido{height:100%; width:0%; border-radius:99px; background:linear-gradient(90deg,var(--teal),var(--teal-claro) 55%,var(--salmao)); transition:width 420ms cubic-bezier(.22,.61,.36,1)}
+
+/* ---------- Telas ---------- */
+main{position:relative; z-index:1}
+.tela{display:none; padding:clamp(1.6rem,1rem + 3vw,3.4rem) 0 3rem; animation:entra 380ms cubic-bezier(.22,.61,.36,1)}
+.tela.ativa{display:block}
+@keyframes entra{from{opacity:0; transform:translateY(14px)} to{opacity:1; transform:none}}
+
+.selo{
+  display:inline-block; font-size:var(--t-mini); letter-spacing:.12em; text-transform:uppercase;
+  font-weight:700; color:var(--teal); background:var(--teal-fundo);
+  padding:.35rem .8rem; border-radius:99px; margin-bottom:.9rem;
+}
+.selo.lav{background:var(--lavanda-fundo); color:var(--lavanda-forte)}
+.selo.sal{background:var(--salmao-fundo); color:var(--salmao-forte)}
+
+.abertura{font-family:var(--fonte-titulo); font-size:var(--t-h2); color:var(--teal); font-style:italic; line-height:1.3}
+
+/* ---------- Cartoes ---------- */
+.cartao{
+  background:#fff; border:1px solid var(--creme-3); border-radius:var(--raio-org);
+  padding:clamp(1.1rem,.9rem + 1vw,1.7rem); box-shadow:var(--sombra); margin-bottom:var(--gap);
+}
+.cartao.creme{background:var(--creme-2); border-color:transparent; box-shadow:none}
+.cartao.teal{background:var(--teal-fundo); border-color:transparent; box-shadow:none}
+.cartao.lav{background:var(--lavanda-fundo); border-color:transparent; box-shadow:none}
+.cartao.sal{background:var(--salmao-fundo); border-color:transparent; box-shadow:none}
+.cartao h3:first-child,.cartao h2:first-child{margin-top:0}
+
+.chave{
+  border-left:5px solid var(--salmao); background:var(--creme-2);
+  padding:1rem 1.1rem; border-radius:0 var(--raio) var(--raio) 0; margin:var(--gap) 0;
+}
+.chave p{font-family:var(--fonte-titulo); font-size:1.25rem; line-height:1.35; color:var(--teal)}
+
+.grade{display:grid; gap:var(--gap)}
+@media(min-width:720px){ .grade-2{grid-template-columns:1fr 1fr} }
+
+/* ---------- Botoes ---------- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+  font-family:var(--fonte-corpo); font-size:1rem; font-weight:700; line-height:1.2;
+  padding:.85rem 1.5rem; border-radius:99px; border:2px solid transparent; cursor:pointer;
+  background:var(--teal); color:var(--creme); text-decoration:none;
+  transition:transform var(--transicao), background var(--transicao), box-shadow var(--transicao);
+  min-height:48px;
+}
+.btn:hover{background:var(--teal-claro); transform:translateY(-2px); box-shadow:var(--sombra-forte); color:var(--creme)}
+.btn:active{transform:translateY(0)}
+.btn-acao{background:var(--salmao-forte); color:#fff}
+.btn-acao:hover{background:#a03f2c; color:#fff}
+.btn-secundario{background:transparent; color:var(--teal); border-color:var(--teal-claro)}
+.btn-secundario:hover{background:var(--teal-fundo); color:var(--teal)}
+.btn-texto{background:none; border:none; color:var(--tinta-suave); text-decoration:underline; cursor:pointer; font-family:inherit; font-size:var(--t-peq); padding:.5rem .3rem; min-height:44px}
+.btn-texto:hover{color:var(--salmao-forte)}
+.btn[disabled]{opacity:.45; cursor:not-allowed; transform:none; box-shadow:none}
+.navegacao{display:flex; gap:.8rem; flex-wrap:wrap; align-items:center; margin-top:clamp(1.4rem,1rem + 1.5vw,2.4rem)}
+.navegacao .espaco{flex:1 1 auto}
+
+/* ---------- Quiz de mitos ---------- */
+.mito{border:1px solid var(--creme-3); background:#fff; border-radius:var(--raio); padding:1rem 1.1rem; margin-bottom:.9rem; box-shadow:var(--sombra)}
+.mito p.afirmacao{font-weight:500; margin-bottom:.8rem}
+.mito .opcoes{display:flex; gap:.6rem; flex-wrap:wrap}
+.mito .opcoes .btn{padding:.6rem 1.2rem; font-size:.95rem}
+.mito .resposta{display:none; margin-top:.85rem; padding:.85rem 1rem; border-radius:14px; font-size:var(--t-peq); line-height:1.55}
+.mito.respondido .resposta{display:block; animation:entra 300ms ease}
+.mito.respondido .opcoes{opacity:.55; pointer-events:none}
+.resposta.certo{background:var(--teal-fundo); border-left:4px solid var(--teal-claro)}
+.resposta.errado{background:var(--salmao-fundo); border-left:4px solid var(--salmao)}
+.resposta .rotulo{display:block; font-weight:700; color:var(--teal); margin-bottom:.2rem}
+.placar{background:var(--lavanda-fundo); border-radius:var(--raio); padding:1rem 1.2rem; margin-top:1rem; display:none}
+.placar.visivel{display:block; animation:entra 320ms ease}
+
+/* ---------- Seletor dos dois eixos ---------- */
+.eixos-seletor{display:grid; gap:1rem}
+@media(min-width:720px){ .eixos-seletor{grid-template-columns:1fr 1fr} }
+.grupo-eixo fieldset{border:none; margin:0; padding:0}
+.grupo-eixo legend{font-weight:700; color:var(--teal); margin-bottom:.6rem; font-size:var(--t-peq); letter-spacing:.03em; text-transform:uppercase}
+.opcao-pilula{display:block; margin-bottom:.55rem; cursor:pointer}
+.opcao-pilula input{position:absolute; opacity:0; width:1px; height:1px}
+.opcao-pilula span{
+  display:block; padding:.75rem 1rem; border-radius:16px; background:#fff;
+  border:2px solid var(--creme-3); transition:all var(--transicao); font-size:var(--t-peq); line-height:1.45;
+}
+.opcao-pilula input:checked + span{border-color:var(--teal-claro); background:var(--teal-fundo); font-weight:500}
+.opcao-pilula input:focus-visible + span{outline:3px solid var(--lavanda-forte); outline-offset:2px}
+.opcao-pilula:hover span{border-color:var(--lavanda)}
+.resultado-eixos{margin-top:1rem; padding:1.1rem 1.2rem; border-radius:var(--raio-org); background:var(--creme-2); min-height:96px; display:flex; gap:1rem; align-items:center}
+.resultado-eixos .forma{flex:0 0 64px}
+.resultado-eixos h4{margin:0 0 .25rem; font-size:1.25rem; color:var(--teal)}
+.resultado-eixos p{font-size:var(--t-peq); margin:0}
+
+/* ---------- Cartoes de estilo (acordeao) ---------- */
+.estilo{border:1px solid var(--creme-3); background:#fff; border-radius:var(--raio-org); margin-bottom:1rem; overflow:hidden; box-shadow:var(--sombra)}
+.estilo-cabecalho{
+  width:100%; display:flex; align-items:center; gap:.9rem; text-align:left; cursor:pointer;
+  background:none; border:none; padding:1rem 1.1rem; font-family:inherit; color:inherit; min-height:64px;
+}
+.estilo-cabecalho:hover{background:var(--creme-2)}
+.estilo-cabecalho .forma{flex:0 0 46px}
+.estilo-cabecalho .nomes{flex:1 1 auto}
+.estilo-cabecalho .nome{display:block; font-family:var(--fonte-titulo); font-size:1.3rem; color:var(--teal); font-weight:600; line-height:1.2}
+.estilo-cabecalho .apelido{display:block; font-size:var(--t-peq); color:var(--tinta-suave); font-style:italic}
+.seta{flex:0 0 auto; width:22px; height:22px; transition:transform var(--transicao); color:var(--teal-claro)}
+.estilo[open] .seta,.estilo.aberto .seta{transform:rotate(180deg)}
+.estilo-corpo{padding:0 1.1rem 1.2rem; display:none}
+.estilo.aberto .estilo-corpo{display:block; animation:entra 300ms ease}
+.estilo-corpo h4{font-size:var(--t-peq); text-transform:uppercase; letter-spacing:.08em; color:var(--salmao-forte); margin:1.2rem 0 .4rem; font-family:var(--fonte-corpo); font-weight:700}
+.estilo-corpo h4:first-child{margin-top:0}
+.cena{background:var(--creme-2); border-radius:var(--raio); padding:.9rem 1rem; font-style:italic; font-size:var(--t-peq); color:var(--tinta-suave)}
+.cena strong{font-style:normal; color:var(--teal); display:block; margin-bottom:.2rem; font-size:var(--t-mini); text-transform:uppercase; letter-spacing:.07em}
+
+/* ---------- Mini-game de reacoes ---------- */
+.jogo-situacao{background:var(--teal-fundo); border-radius:var(--raio-org); padding:1.1rem 1.2rem; margin-bottom:1rem}
+.jogo-situacao .rodada{font-size:var(--t-mini); text-transform:uppercase; letter-spacing:.1em; color:var(--teal-claro); font-weight:700}
+.jogo-situacao p{margin:.35rem 0 0; font-family:var(--fonte-titulo); font-size:1.25rem; color:var(--teal); line-height:1.3}
+.jogo-reacao{background:#fff; border:2px solid var(--creme-3); border-radius:18px; padding:.9rem 1rem; margin-bottom:.75rem}
+.jogo-reacao .fala{font-size:var(--t-peq); line-height:1.55; margin:0 0 .7rem}
+.jogo-opcoes{display:flex; flex-wrap:wrap; gap:.45rem}
+.jogo-opcoes button{
+  font-family:inherit; font-size:var(--t-mini); font-weight:500; cursor:pointer; min-height:44px;
+  padding:.5rem .85rem; border-radius:99px; border:1.5px solid var(--lavanda); background:var(--lavanda-fundo); color:var(--tinta);
+  transition:all var(--transicao);
+}
+.jogo-opcoes button:hover{background:var(--lavanda); transform:translateY(-1px)}
+.jogo-reacao.resolvida .jogo-opcoes{display:none}
+.jogo-reacao .explicacao{display:none; font-size:var(--t-peq); line-height:1.55; padding:.8rem .9rem; border-radius:14px}
+.jogo-reacao.resolvida .explicacao{display:block; animation:entra 280ms ease}
+.jogo-reacao.acerto{border-color:var(--teal-claro)}
+.jogo-reacao.acerto .explicacao{background:var(--teal-fundo)}
+.jogo-reacao.erro{border-color:var(--salmao)}
+.jogo-reacao.erro .explicacao{background:var(--salmao-fundo)}
+.explicacao .veredito{display:block; font-weight:700; color:var(--teal); margin-bottom:.25rem}
+
+/* ---------- Questionario ---------- */
+.contador-quest{
+  position:sticky; top:74px; z-index:10; background:rgba(255,255,255,.96); backdrop-filter:blur(6px);
+  padding:.6rem .9rem; border-radius:99px; border:1px solid var(--creme-3);
+  font-size:var(--t-peq); font-weight:500; color:var(--teal); margin-bottom:1.2rem;
+  display:flex; align-items:center; gap:.6rem; box-shadow:var(--sombra);
+}
+.contador-quest .mini-trilho{flex:1 1 auto; height:6px; background:var(--creme-3); border-radius:99px; overflow:hidden}
+.contador-quest .mini-preenchido{height:100%; width:0%; background:var(--salmao); border-radius:99px; transition:width var(--transicao)}
+.item{border-bottom:1px solid var(--creme-3); padding:1.1rem 0}
+.item:last-of-type{border-bottom:none}
+.item fieldset{border:none; margin:0; padding:0}
+.item legend{font-weight:500; line-height:1.5; margin-bottom:.85rem; padding:0}
+.item legend .numero{color:var(--salmao-forte); font-weight:700; margin-right:.35rem}
+.likert{display:flex; align-items:flex-end; justify-content:space-between; gap:.3rem}
+.likert label{flex:1 1 0; display:flex; flex-direction:column; align-items:center; gap:.35rem; cursor:pointer; text-align:center}
+.likert input{position:absolute; opacity:0; width:1px; height:1px}
+.likert .bolha{
+  border-radius:50%; border:2px solid var(--teal-claro); background:#fff; display:block;
+  transition:all var(--transicao);
+}
+.likert label:nth-child(1) .bolha{width:34px;height:34px}
+.likert label:nth-child(2) .bolha{width:29px;height:29px}
+.likert label:nth-child(3) .bolha{width:26px;height:26px; border-color:var(--lavanda)}
+.likert label:nth-child(4) .bolha{width:29px;height:29px; border-color:var(--salmao)}
+.likert label:nth-child(5) .bolha{width:34px;height:34px; border-color:var(--salmao)}
+.likert label:nth-child(-n+2) .bolha{border-color:var(--teal-claro)}
+.likert input:checked + .bolha{background:var(--teal); border-color:var(--teal); box-shadow:0 0 0 4px var(--teal-fundo)}
+.likert label:nth-child(4) input:checked + .bolha,.likert label:nth-child(5) input:checked + .bolha{background:var(--salmao-forte); border-color:var(--salmao-forte); box-shadow:0 0 0 4px var(--salmao-fundo)}
+.likert input:focus-visible + .bolha{outline:3px solid var(--lavanda-forte); outline-offset:3px}
+.likert label:hover .bolha{transform:scale(1.08)}
+.likert .rotulo-likert{font-size:.68rem; line-height:1.2; color:var(--tinta-suave); max-width:6.5em}
+.item.pendente{background:var(--salmao-fundo); border-radius:14px; padding-inline:.7rem}
+
+/* ---------- Grafico de quadrantes ---------- */
+.grafico-caixa{background:#fff; border:1px solid var(--creme-3); border-radius:var(--raio-org); padding:1rem; box-shadow:var(--sombra)}
+.ponto-usuario{transition:cx 900ms cubic-bezier(.22,.61,.36,1), cy 900ms cubic-bezier(.22,.61,.36,1)}
+.medidor{margin:1rem 0}
+.medidor .rot{display:flex; justify-content:space-between; font-size:var(--t-peq); font-weight:500; margin-bottom:.35rem}
+.medidor .trilho-med{height:12px; background:var(--creme-3); border-radius:99px; overflow:hidden}
+.medidor .barra{height:100%; width:0%; border-radius:99px; transition:width 900ms cubic-bezier(.22,.61,.36,1)}
+.barra.ansiedade{background:linear-gradient(90deg,var(--salmao),var(--salmao-forte))}
+.barra.evitacao{background:linear-gradient(90deg,var(--lavanda),var(--lavanda-forte))}
+.aviso-etico{background:var(--lavanda-fundo); border-radius:var(--raio); padding:1rem 1.1rem; font-size:var(--t-peq); color:var(--tinta-suave); border-left:4px solid var(--lavanda-forte)}
+.aviso-etico strong{color:var(--lavanda-forte)}
+
+/* ---------- Modulo 4: ciclo e reflexao ---------- */
+.ciclo-caixa{display:grid; gap:1.2rem}
+@media(min-width:860px){ .ciclo-caixa{grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:start} }
+.no-ciclo{cursor:pointer}
+.no-ciclo rect,.no-ciclo circle{transition:all var(--transicao)}
+.no-ciclo:hover rect{fill:var(--lavanda)}
+.no-ciclo.ativo rect{fill:var(--salmao); stroke:var(--salmao-forte)}
+.no-ciclo text{font-family:var(--fonte-corpo); font-size:11px; fill:var(--tinta); pointer-events:none}
+.campo{margin-bottom:1rem}
+.campo label{display:block; font-weight:500; margin-bottom:.4rem; font-size:var(--t-peq); color:var(--teal)}
+.campo textarea,.campo input[type=text]{
+  width:100%; font-family:inherit; font-size:var(--t-peq); line-height:1.55; color:var(--tinta);
+  padding:.7rem .8rem; border-radius:14px; border:2px solid var(--creme-3); background:#fff; resize:vertical;
+  transition:border-color var(--transicao);
+}
+.campo textarea:focus,.campo input:focus{border-color:var(--teal-claro); outline:none}
+.campo textarea:focus-visible{outline:3px solid var(--lavanda-forte); outline-offset:2px}
+.campo.destacado textarea{border-color:var(--salmao); background:var(--salmao-fundo)}
+.privacidade{font-size:var(--t-mini); color:var(--tinta-suave); display:flex; gap:.45rem; align-items:flex-start; margin-top:.4rem}
+.privacidade svg{flex:0 0 16px; margin-top:2px; color:var(--teal-claro)}
+.check-linha{display:flex; gap:.7rem; align-items:flex-start; padding:.65rem .2rem; cursor:pointer; border-bottom:1px solid var(--creme-3)}
+.check-linha:last-child{border-bottom:none}
+.check-linha input{
+  flex:0 0 22px; width:22px; height:22px; margin-top:2px; accent-color:var(--teal); cursor:pointer;
+}
+.check-linha span{font-size:var(--t-peq); line-height:1.5}
+.matriz{display:grid; gap:.9rem}
+@media(min-width:720px){ .matriz{grid-template-columns:1fr 1fr} }
+.combo{background:#fff; border:1px solid var(--creme-3); border-radius:var(--raio); padding:.95rem 1rem}
+.combo h4{margin:0 0 .3rem; font-family:var(--fonte-corpo); font-size:var(--t-peq); font-weight:700; color:var(--salmao-forte); text-transform:uppercase; letter-spacing:.05em}
+.combo p{font-size:var(--t-peq); margin:0; color:var(--tinta-suave); line-height:1.55}
+
+/* ---------- Modulo 5: praticas e checklist ---------- */
+.pratica{border:1px solid var(--creme-3); background:#fff; border-radius:var(--raio-org); padding:1.1rem 1.2rem; margin-bottom:1rem; box-shadow:var(--sombra)}
+.pratica.fora-do-plano{background:var(--creme-2); box-shadow:none; opacity:.92}
+.pratica .tag{display:inline-block; font-size:var(--t-mini); font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:.25rem .7rem; border-radius:99px; margin-bottom:.6rem}
+.tag.recomendada{background:var(--salmao-fundo); color:var(--salmao-forte)}
+.tag.comum{background:var(--teal-fundo); color:var(--teal)}
+.tag.opcional{background:var(--lavanda-fundo); color:var(--lavanda-forte)}
+.pratica h3{margin-bottom:.4rem}
+.pratica .porque{font-size:var(--t-peq); color:var(--tinta-suave); font-style:italic; border-left:3px solid var(--lavanda); padding-left:.8rem; margin-bottom:.9rem}
+.pratica ol{font-size:var(--t-peq); padding-left:1.2em}
+.pratica .tarefa{background:var(--creme-2); border-radius:14px; padding:.8rem .9rem; font-size:var(--t-peq); margin-top:.9rem}
+.pratica .tarefa strong{display:block; font-size:var(--t-mini); text-transform:uppercase; letter-spacing:.07em; color:var(--salmao-forte); margin-bottom:.2rem}
+.frases-modelo{background:var(--lavanda-fundo); border-radius:14px; padding:.8rem .9rem; font-size:var(--t-peq); margin:.8rem 0}
+.frases-modelo p{margin:0 0 .5rem}
+.frases-modelo p:last-child{margin:0}
+.progresso-cuidado{background:var(--teal-fundo); border-radius:var(--raio-org); padding:1.1rem 1.2rem; margin-bottom:1.2rem}
+.progresso-cuidado .trilho-med{height:14px; background:#fff; border-radius:99px; overflow:hidden; margin:.5rem 0}
+.progresso-cuidado .barra{height:100%; width:0%; background:linear-gradient(90deg,var(--teal-claro),var(--salmao)); border-radius:99px; transition:width 600ms cubic-bezier(.22,.61,.36,1)}
+.marco{font-size:var(--t-peq); color:var(--teal); font-style:italic; margin-top:.5rem; min-height:1.4em}
+
+/* ---------- Resumo final ---------- */
+.resumo-bloco{background:#fff; border:1px solid var(--creme-3); border-radius:var(--raio-org); padding:1.2rem; margin-bottom:1rem; box-shadow:var(--sombra)}
+.resumo-bloco h3{margin-top:0}
+.lista-limpa{list-style:none; padding:0; margin:0}
+.lista-limpa li{padding:.45rem 0; border-bottom:1px solid var(--creme-3); font-size:var(--t-peq)}
+.lista-limpa li:last-child{border-bottom:none}
+.cta-terapia{background:var(--teal); color:var(--creme); border-radius:var(--raio-org); padding:clamp(1.3rem,1rem + 1.5vw,2.2rem)}
+.cta-terapia h2,.cta-terapia h3{color:var(--creme)}
+.cta-terapia p{color:#E4EFED}
+.cta-terapia .btn{background:var(--salmao-forte); color:#fff}
+.cta-terapia .btn:hover{background:#a03f2c}
+
+/* ---------- Rodape ---------- */
+.rodape{background:var(--creme-2); margin-top:3rem; padding:2.4rem 0 3rem; border-top:1px solid var(--creme-3); position:relative; z-index:1}
+.rodape h3{font-size:1.2rem}
+.fontes{font-size:var(--t-peq); color:var(--tinta-suave)}
+.fontes li{margin-bottom:.55rem}
+.fontes strong{color:var(--teal)}
+details.expansivel{border-top:1px solid var(--creme-3); padding:.9rem 0}
+details.expansivel summary{cursor:pointer; font-weight:700; color:var(--teal); font-size:var(--t-peq); list-style:none; display:flex; justify-content:space-between; gap:1rem; min-height:32px; align-items:center}
+details.expansivel summary::-webkit-details-marker{display:none}
+details.expansivel summary::after{content:'+'; font-size:1.3rem; color:var(--salmao-forte); line-height:1}
+details.expansivel[open] summary::after{content:'-'}
+details.expansivel > div{padding-top:.7rem}
+
+/* ---------- Impressao ---------- */
+#area-impressao{display:none}
+@media print{
+  .topo,.blobs,.rodape,main,.nao-imprimir{display:none!important}
+  body{background:#fff; color:#000; font-size:11pt}
+  #area-impressao{display:block!important; padding:0 12mm}
+  #area-impressao h1{font-size:20pt; color:#14514E}
+  #area-impressao h2{font-size:13pt; color:#14514E; margin-top:14pt; border-bottom:1px solid #ccc; padding-bottom:3pt}
+  #area-impressao .bloco-imp{page-break-inside:avoid; margin-bottom:10pt}
+  #area-impressao .rodape-imp{margin-top:16pt; font-size:8.5pt; color:#555; border-top:1px solid #ccc; padding-top:6pt}
+  a{color:#000; text-decoration:none}
+}
+
+/* ---------- Responsivo estreito (ate 360px) ---------- */
+@media(max-width:420px){
+  :root{--largura:min(100% - 1.5rem, 62rem)}
+  .likert .rotulo-likert{font-size:.6rem; max-width:5em}
+  .likert label:nth-child(1) .bolha,.likert label:nth-child(5) .bolha{width:30px;height:30px}
+  .likert label:nth-child(2) .bolha,.likert label:nth-child(4) .bolha{width:26px;height:26px}
+  .likert label:nth-child(3) .bolha{width:23px;height:23px}
+  .btn{width:100%; padding:.8rem 1rem}
+  .navegacao{flex-direction:column-reverse; align-items:stretch}
+  .navegacao .espaco{display:none}
+  .mito .opcoes .btn{width:auto; flex:1 1 40%}
+  .contador-quest{top:88px}
+  .estilo-cabecalho{gap:.6rem; padding:.9rem .8rem}
+  .estilo-cabecalho .nome{font-size:1.15rem}
+}
+
+/* ---------- Movimento reduzido ---------- */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important; animation-iteration-count:1!important; transition-duration:.001ms!important; scroll-behavior:auto!important}
+  .tela{animation:none}
+}
+</style>
+</head>
+<body>
+
+<!-- Formas organicas de fundo (assinatura visual da marca) -->
+<div class="blobs" aria-hidden="true">
+  <svg class="blob-1" viewBox="0 0 200 200"><path fill="#C7BFE3" fill-opacity=".45" d="M45.5,-58.6C58.1,-49.6,66.4,-34.4,70.6,-18.2C74.7,-2,74.8,15.2,68,29.4C61.2,43.7,47.6,54.9,32.6,61.6C17.6,68.3,1.2,70.4,-14.8,67.6C-30.8,64.8,-46.5,57,-57.9,44.6C-69.3,32.1,-76.5,15,-75.9,-1.6C-75.4,-18.2,-67.1,-34.4,-55,-45.8C-42.9,-57.2,-27,-63.9,-10.9,-66.3C5.2,-68.7,32.9,-67.6,45.5,-58.6Z" transform="translate(100 100)"/></svg>
+  <svg class="blob-2" viewBox="0 0 200 200"><path fill="#E98A7A" fill-opacity=".32" d="M52.4,-64.7C66.3,-54.2,74.9,-36.4,76.9,-18.5C78.9,-0.6,74.3,17.4,64.7,31.8C55.1,46.2,40.5,57,24.3,63.3C8.1,69.6,-9.7,71.4,-26.5,66.6C-43.3,61.8,-59.1,50.4,-67.4,35C-75.7,19.6,-76.5,0.2,-71.4,-16.8C-66.3,-33.8,-55.3,-48.4,-41.4,-58.9C-27.5,-69.4,-10.7,-75.8,5.9,-76.9C22.5,-78,38.5,-75.2,52.4,-64.7Z" transform="translate(100 100)"/></svg>
+  <svg class="blob-3" viewBox="0 0 200 200"><path fill="#2E7C77" fill-opacity=".22" d="M39.9,-49.6C51.1,-40.3,59.1,-27.3,62.6,-13.1C66.1,1.1,65.1,16.5,58.2,28.8C51.3,41.1,38.5,50.3,24.6,56.2C10.7,62.1,-4.3,64.7,-18.6,61.4C-32.9,58.1,-46.5,48.9,-55.2,36.2C-63.9,23.5,-67.7,7.3,-64.8,-7.3C-61.9,-21.9,-52.3,-34.9,-40.2,-44.4C-28.1,-53.9,-14,-59.9,0.9,-61C15.8,-62.1,28.7,-58.9,39.9,-49.6Z" transform="translate(100 100)"/></svg>
+</div>
+
+<!-- ============ BARRA DE PROGRESSO E MARCA ============ -->
+<header class="topo nao-imprimir">
+  <div class="topo-interno">
+    <div class="topo-linha">
+      <div class="marca">Maneiras de amar<span>Psicoterapia e Afins</span></div>
+      <div class="etapa-rotulo" id="etapa-rotulo" aria-live="polite">Comece por aqui</div>
+    </div>
+    <div class="trilho" role="progressbar" aria-labelledby="etapa-rotulo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="barra-progresso">
+      <div class="trilho-preenchido" id="trilho-preenchido"></div>
+    </div>
+  </div>
+</header>
+
+<main id="app">
+
+<!-- ============================================================
+     TELA 0  -  CAPA
+     ============================================================ -->
+<section class="tela ativa" id="tela-0" aria-labelledby="titulo-capa">
+  <div class="container">
+    <span class="selo">Recurso interativo e gratuito</span>
+    <h1 id="titulo-capa">Por que algumas pessoas se agarram e outras fogem quando o amor aperta?</h1>
+    <p class="abertura">Talvez você já tenha se perguntado por que, quando a relação fica difícil, você faz sempre a mesma coisa. Insiste, cobra, some, se fecha. E por que a outra pessoa faz sempre o oposto.</p>
+    <p style="margin-top:1.2rem">Não é falta de amor nem falta de caráter. É apego: um sistema que você aprendeu a operar muito antes de saber o que era um relacionamento. Nesta jornada de cinco módulos, você vai entender de onde vem esse padrão, reconhecer os quatro estilos de apego adulto, descobrir o seu através de um questionário de autorreflexão e sair com um plano prático para construir mais segurança.</p>
+
+    <div class="grade grade-2" style="margin-top:1.6rem">
+      <div class="cartao teal">
+        <h3>Quanto tempo leva</h3>
+        <p class="pequeno">Entre 20 e 30 minutos, no seu ritmo. Tudo o que você responder fica salvo no seu navegador, então dá para fechar e voltar depois de onde parou.</p>
+      </div>
+      <div class="cartao lav">
+        <h3>Seus dados são seus</h3>
+        <p class="pequeno">Nada do que você escrever ou responder sai do seu dispositivo. Não existe envio, cadastro ou servidor guardando suas respostas. Se quiser, você apaga tudo com um clique no final.</p>
+      </div>
+    </div>
+
+    <div class="aviso-etico" style="margin-top:1.2rem">
+      <strong>Antes de começar:</strong> este é um material psicoeducativo de autoconhecimento, criado pela psicóloga Paula Rodrigues. Não é um teste psicológico validado nem um diagnóstico. Se você está sofrendo em suas relações, a leitura mais confiável do seu funcionamento acontece dentro de um processo de psicoterapia.
+    </div>
+
+    <div class="navegacao">
+      <button class="btn btn-acao" id="btn-comecar" type="button">Começar a jornada</button>
+      <button class="btn btn-secundario" id="btn-continuar" type="button" hidden>Continuar de onde parei</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TELA 1  -  MODULO 1: O QUE E APEGO
+     ============================================================ -->
+<section class="tela" id="tela-1" aria-labelledby="titulo-m1">
+  <div class="container">
+    <span class="selo">Módulo 1 de 5</span>
+    <h1 id="titulo-m1">O que é apego, de verdade</h1>
+    <p>A palavra apego virou sinônimo de grude, dependência, fraqueza. Na psicologia ela significa outra coisa, bem mais interessante. Antes da explicação, vamos testar o que você já acha que sabe.</p>
+
+    <!-- Quiz de mitos vs ciencia -->
+    <h2 style="margin-top:2rem">Mito ou ciência?</h2>
+    <p class="texto-suave pequeno">Oito afirmações que circulam por aí. Escolha e veja a resposta na hora. Errar aqui é parte do processo.</p>
+    <div id="lista-mitos"></div>
+    <div class="placar" id="placar-mitos" aria-live="polite"></div>
+
+    <!-- Psicoeducacao -->
+    <h2 style="margin-top:2.4rem">O que Bowlby descobriu</h2>
+    <p>Nos anos 1950, o psiquiatra inglês John Bowlby observou o que acontecia com crianças separadas de seus cuidadores. O que ele viu contrariava a ideia da época de que criança chora por manha ou por interesse em comida. Bowlby percebeu outra coisa: buscar proximidade de alguém que cuida da gente é um sistema biológico, tão básico quanto sentir fome ou sentir medo.</p>
+    <p>Esse sistema tem uma função clara: nos manter perto de quem nos protege quando estamos vulneráveis. E ele não desliga na vida adulta. Ele só muda de endereço. Onde antes estava a mãe, o pai, a avó, agora está o parceiro ou a parceira. Por isso uma discussão às onze da noite mexe tanto com o corpo: não é drama, é um alarme antigo sendo disparado.</p>
+    <p>Bowlby descreveu duas funções que a pessoa amada cumpre para nós. Ela é <strong>base segura</strong>, o lugar de onde a gente sai para explorar o mundo sabendo que tem para onde voltar. E é <strong>porto seguro</strong>, o lugar para onde a gente corre quando o mundo assusta. Quando essas duas funções existem, a pessoa não fica mais dependente. Fica mais livre. Segurança e autonomia não são opostos, são o mesmo movimento.</p>
+
+    <div class="chave"><p>Apego não é dependência. É a biologia de precisar de alguém, e ela acompanha o ser humano do berço ao fim da vida.</p></div>
+
+    <h2 style="margin-top:2.2rem">As lentes invisíveis que você aprendeu a usar</h2>
+    <p>Bowlby chamou de <strong>modelos internos de funcionamento</strong> as conclusões que a gente tira das primeiras relações e passa a aplicar em todas as outras, sem perceber. São respostas para duas perguntas que ninguém formula em voz alta:</p>
+    <ul>
+      <li><strong>Eu mereço cuidado?</strong> Sou alguém digno de ser amado, ou preciso me esforçar muito para não ser deixado de lado?</li>
+      <li><strong>Posso contar com os outros?</strong> Quando eu precisar, alguém vem, ou é mais seguro não esperar nada de ninguém?</li>
+    </ul>
+    <p>Mary Ainsworth, colaboradora de Bowlby, mostrou em pesquisa como essas conclusões se formam. Em um procedimento chamado Situação Estranha, ela observou bebês separados brevemente do cuidador e o que acontecia no reencontro. O que mais previa a reação do bebê não era o quanto o cuidador amava, era a <strong>sensibilidade responsiva</strong>: perceber o sinal da criança, entender o que ele significa e responder de forma previsível. Cuidadores previsíveis geravam bebês que se acalmavam rápido. Cuidadores imprevisíveis, ora disponíveis ora não, geravam bebês que protestavam muito e demoravam a se acalmar. Cuidadores que se incomodavam com a demanda emocional geravam bebês que pareciam não se importar, mas cujo corpo mostrava estresse mesmo assim.</p>
+    <p>Anos depois, Mary Main e Judith Solomon identificaram um quarto padrão, o desorganizado, que aparece quando quem deveria acalmar é também a fonte do susto. A criança fica sem estratégia possível, porque correr para o cuidador e fugir dele viram o mesmo movimento.</p>
+
+    <!-- Seletor dos dois eixos -->
+    <h2 style="margin-top:2.2rem">Monte as lentes e veja o estilo aparecer</h2>
+    <p class="texto-suave pequeno">Escolha uma resposta em cada coluna. A combinação das duas visões gera os quatro estilos de apego adulto descritos por Bartholomew e Horowitz.</p>
+    <div class="cartao">
+      <div class="eixos-seletor">
+        <div class="grupo-eixo">
+          <fieldset>
+            <legend>Como aprendi a me ver</legend>
+            <label class="opcao-pilula"><input type="radio" name="eixo-si" value="positivo"><span>Eu mereço cuidado. Posso pedir sem virar peso.</span></label>
+            <label class="opcao-pilula"><input type="radio" name="eixo-si" value="negativo"><span>Não sei se mereço. Preciso me esforçar para não ser deixado de lado.</span></label>
+          </fieldset>
+        </div>
+        <div class="grupo-eixo">
+          <fieldset>
+            <legend>Como aprendi a ver o outro</legend>
+            <label class="opcao-pilula"><input type="radio" name="eixo-outro" value="positivo"><span>Posso contar com as pessoas. Quando eu precisar, alguém vem.</span></label>
+            <label class="opcao-pilula"><input type="radio" name="eixo-outro" value="negativo"><span>É arriscado contar. Melhor não esperar demais de ninguém.</span></label>
+          </fieldset>
+        </div>
+      </div>
+      <div class="resultado-eixos" id="resultado-eixos" aria-live="polite">
+        <p class="texto-suave pequeno" style="margin:0">Escolha uma opção de cada lado para ver qual estilo essa combinação costuma gerar.</p>
+      </div>
+    </div>
+
+    <div class="chave"><p>Estilo de apego é padrão aprendido, não sentença. O que foi construído em relação pode ser reconstruído em relação.</p></div>
+    <p class="pequeno texto-suave">E aqui vale uma nota de honestidade: nenhum cuidador dá conta de responder bem o tempo todo. Insegurança no apego quase nunca vem de maldade, vem de contexto, cansaço, sobrecarga, história própria não elaborada. Entender de onde vem o seu padrão não é montar um processo contra quem te criou. É parar de repetir no automático.</p>
+
+    <div class="navegacao">
+      <button class="btn btn-secundario nav-voltar" type="button">Voltar</button>
+      <span class="espaco"></span>
+      <button class="btn btn-acao nav-avancar" type="button">Ir para os quatro estilos</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TELA 2  -  MODULO 2: OS QUATRO ESTILOS
+     ============================================================ -->
+<section class="tela" id="tela-2" aria-labelledby="titulo-m2">
+  <div class="container">
+    <span class="selo">Módulo 2 de 5</span>
+    <h1 id="titulo-m2">Os quatro estilos de apego adulto</h1>
+    <p>Em 1987, Cindy Hazan e Phillip Shaver tiveram uma intuição que mudou a área: e se o amor romântico adulto funcionasse pelo mesmo sistema que liga um bebê ao cuidador? A pesquisa deu razão a eles. As mesmas perguntas de fundo, eu mereço e posso contar, aparecem na forma como brigamos, pedimos, sumimos e voltamos.</p>
+    <p class="texto-suave pequeno">Abra cada cartão no seu tempo. Preste atenção menos no rótulo e mais nas cenas: é ali que a gente costuma se reconhecer.</p>
+
+    <div id="lista-estilos"></div>
+
+    <!-- Mini-game -->
+    <h2 style="margin-top:2.4rem">De quem é essa reação?</h2>
+    <p class="texto-suave pequeno">Seis situações comuns, quatro reações possíveis em cada uma, uma para cada estilo. Escolha de quem é a reação. Acertando ou errando, o feedback explica o medo e a estratégia por trás do comportamento.</p>
+    <div id="jogo-container"></div>
+    <div class="placar" id="placar-jogo" aria-live="polite"></div>
+
+    <div class="navegacao">
+      <button class="btn btn-secundario nav-voltar" type="button">Voltar</button>
+      <span class="espaco"></span>
+      <button class="btn btn-acao nav-avancar" type="button">Descobrir o meu estilo</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TELA 3  -  MODULO 3: QUESTIONARIO
+     ============================================================ -->
+<section class="tela" id="tela-3" aria-labelledby="titulo-m3">
+  <div class="container">
+    <span class="selo">Módulo 3 de 5</span>
+    <h1 id="titulo-m3">Qual é o meu estilo?</h1>
+    <p>A pesquisa mais atual, iniciada por Fraley, Waller e Brennan, mostrou que apego adulto não funciona bem como caixinha. Funciona como duas réguas contínuas: quanta <strong>ansiedade de apego</strong> você carrega (medo de ser abandonado, necessidade de garantia) e quanta <strong>evitação de apego</strong> (desconforto com intimidade, preferência por se bastar). Todo mundo tem um pouco das duas. O que muda é a intensidade.</p>
+    <p>São 20 afirmações sobre relacionamentos amorosos. Responda pensando em como você <em>costuma</em> ser, não em como gostaria de ser. Se não está em uma relação agora, responda pensando na sua relação mais significativa.</p>
+
+    <div class="aviso-etico" style="margin-bottom:1.4rem">
+      <strong>Importante:</strong> este questionário foi escrito para reflexão pessoal, inspirado nas duas dimensões estudadas pela pesquisa em apego adulto. Ele não é um instrumento psicométrico validado e não produz diagnóstico. Serve para organizar o que você já sente e levar isso para uma conversa melhor, de preferência com um psicólogo ou psicóloga.
+    </div>
+
+    <!-- o contador fica dentro do cartao para que o sticky termine junto com a lista -->
+    <div class="cartao" style="padding-top:.6rem">
+      <div class="contador-quest" id="contador-quest">
+        <span id="contador-texto">0 de 20 respondidas</span>
+        <span class="mini-trilho"><span class="mini-preenchido" id="mini-preenchido"></span></span>
+      </div>
+      <div id="lista-itens"></div>
+    </div>
+
+    <p class="pequeno texto-suave" id="aviso-faltando" role="status"></p>
+
+    <div class="navegacao nao-imprimir">
+      <button class="btn btn-secundario nav-voltar" type="button">Voltar</button>
+      <span class="espaco"></span>
+      <button class="btn btn-acao" id="btn-calcular" type="button">Ver meu resultado</button>
+    </div>
+
+    <!-- Resultado do questionario -->
+    <div id="resultado-quest" hidden style="margin-top:2.4rem">
+      <h2 id="titulo-resultado">Seu retrato em duas réguas</h2>
+
+      <div class="grade grade-2">
+        <div class="grafico-caixa">
+          <svg viewBox="0 0 340 330" role="img" aria-labelledby="titulo-gr desc-gr">
+            <title id="titulo-gr">Gráfico dos dois eixos do apego</title>
+            <desc id="desc-gr">Sua posição em um gráfico com eixo vertical de ansiedade de apego e eixo horizontal de evitação de apego, dividido em quatro quadrantes.</desc>
+            <!-- quadrantes -->
+            <rect x="46" y="153" width="129" height="129" fill="#E2EFED"/>
+            <rect x="46" y="24" width="129" height="129" fill="#FBE7E1"/>
+            <rect x="175" y="153" width="129" height="129" fill="#EDE8F7"/>
+            <rect x="175" y="24" width="129" height="129" fill="#F3EADF"/>
+            <!-- linhas -->
+            <line x1="46" y1="153" x2="304" y2="153" stroke="#EFE3D4" stroke-width="1.5"/>
+            <line x1="175" y1="24" x2="175" y2="282" stroke="#EFE3D4" stroke-width="1.5"/>
+            <rect x="46" y="24" width="258" height="258" fill="none" stroke="#14514E" stroke-width="1.5"/>
+            <!-- rotulos dos quadrantes -->
+            <g font-family="DM Sans, sans-serif" font-size="10" fill="#5B514C" text-anchor="middle">
+              <text x="110" y="270">Seguro</text>
+              <text x="110" y="40">Ansioso</text>
+              <text x="110" y="52">preocupado</text>
+              <text x="240" y="264">Evitativo</text>
+              <text x="240" y="276">desapegado</text>
+              <text x="240" y="40">Desorganizado</text>
+              <text x="240" y="52">amedrontado</text>
+            </g>
+            <!-- eixos -->
+            <g font-family="DM Sans, sans-serif" font-size="11" fill="#14514E" font-weight="500">
+              <text x="175" y="308" text-anchor="middle">Evitação de apego</text>
+              <text x="18" y="153" text-anchor="middle" transform="rotate(-90 18 153)">Ansiedade de apego</text>
+            </g>
+            <g font-family="DM Sans, sans-serif" font-size="9" fill="#5B514C">
+              <text x="46" y="296" text-anchor="middle">baixa</text>
+              <text x="304" y="296" text-anchor="middle">alta</text>
+              <text x="38" y="285" text-anchor="end">baixa</text>
+              <text x="38" y="30" text-anchor="end">alta</text>
+            </g>
+            <!-- ponto do usuario -->
+            <circle class="ponto-usuario" id="ponto-halo" cx="175" cy="153" r="16" fill="#E98A7A" fill-opacity=".28"/>
+            <circle class="ponto-usuario" id="ponto-nucleo" cx="175" cy="153" r="7" fill="#B94A35" stroke="#fff" stroke-width="2"/>
+          </svg>
+        </div>
+
+        <div>
+          <div class="cartao creme" style="margin-bottom:1rem">
+            <p class="mini texto-suave" style="letter-spacing:.1em; text-transform:uppercase; margin-bottom:.2rem">Tendência predominante</p>
+            <h3 id="nome-estilo" style="font-size:1.6rem; margin-bottom:.3rem">-</h3>
+            <p class="pequeno" id="frase-estilo">-</p>
+          </div>
+          <div class="medidor">
+            <div class="rot"><span>Ansiedade de apego</span><span id="valor-ansiedade">0</span></div>
+            <div class="trilho-med"><div class="barra ansiedade" id="barra-ansiedade"></div></div>
+            <p class="mini texto-suave" id="faixa-ansiedade" style="margin-top:.3rem"></p>
+          </div>
+          <div class="medidor">
+            <div class="rot"><span>Evitação de apego</span><span id="valor-evitacao">0</span></div>
+            <div class="trilho-med"><div class="barra evitacao" id="barra-evitacao"></div></div>
+            <p class="mini texto-suave" id="faixa-evitacao" style="margin-top:.3rem"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cartao" style="margin-top:1.2rem">
+        <h3>Lendo esse resultado do jeito certo</h3>
+        <p class="pequeno" id="leitura-dimensional">-</p>
+        <p class="pequeno">Repare que o rótulo é o resumo, não a verdade. Duas pessoas classificadas no mesmo quadrante podem ter vidas amorosas muito diferentes, dependendo de estarem perto ou longe das bordas. O que interessa mais é a direção: onde está sua régua hoje e para onde você quer levá-la.</p>
+      </div>
+
+      <div class="aviso-etico" style="margin-top:1rem">
+        <strong>Isto não é um diagnóstico.</strong> Nenhum questionário respondido sozinho substitui uma avaliação psicológica. Se o que apareceu aqui te tocou, leve para a terapia. Um processo clínico consegue ver o que um teste não vê: sua história, seu contexto e o que sustenta o padrão.
+      </div>
+
+      <div class="navegacao">
+        <span class="espaco"></span>
+        <button class="btn btn-acao nav-avancar" type="button">Olhar para a minha relação</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TELA 4  -  MODULO 4: MINHA RELACAO ATUAL
+     ============================================================ -->
+<section class="tela" id="tela-4" aria-labelledby="titulo-m4">
+  <div class="container">
+    <span class="selo">Módulo 4 de 5</span>
+    <h1 id="titulo-m4">Como isso aparece na minha relação</h1>
+    <p>Estilo de apego não acontece dentro de uma pessoa só. Ele acontece entre duas. A terapeuta Sue Johnson passou décadas observando casais e percebeu que a maioria das brigas não é sobre o assunto da briga. É sobre uma pergunta silenciosa: <em>você está aí para mim?</em></p>
+
+    <div class="cartao">
+      <fieldset style="border:none;margin:0;padding:0">
+        <legend style="font-weight:700;color:var(--teal);margin-bottom:.7rem">Neste momento, eu:</legend>
+        <label class="opcao-pilula"><input type="radio" name="status-relacao" value="em"><span>Estou em um relacionamento</span></label>
+        <label class="opcao-pilula"><input type="radio" name="status-relacao" value="sem"><span>Não estou em uma relação agora</span></label>
+      </fieldset>
+    </div>
+
+    <div id="bloco-relacao" hidden>
+      <p class="pequeno texto-suave" id="nota-contexto"></p>
+
+      <h2 style="margin-top:2rem">O ciclo que se repete</h2>
+      <p>Quando o apego de duas pessoas se ativa ao mesmo tempo, nasce uma dança. Um persegue: cobra, insiste, quer resolver agora, levanta a voz porque precisa de sinal de vida. O outro se afasta: silencia, minimiza, sai da sala, promete conversar depois. Quanto mais um persegue, mais o outro se afasta. Quanto mais um se afasta, mais o outro persegue. Ninguém é o vilão. Os dois estão com medo, só que em direções opostas.</p>
+
+      <div class="cartao">
+        <h3 style="font-size:1.1rem">Reconheço isso na minha relação</h3>
+        <div id="checklist-eft"></div>
+      </div>
+
+      <div class="cartao">
+        <fieldset style="border:none;margin:0;padding:0">
+          <legend style="font-weight:700;color:var(--teal);margin-bottom:.7rem">Quando o clima aperta, meu movimento mais comum é:</legend>
+          <label class="opcao-pilula"><input type="radio" name="papel-ciclo" value="persigo"><span>Eu vou atrás. Cobro, insisto, preciso resolver na hora.</span></label>
+          <label class="opcao-pilula"><input type="radio" name="papel-ciclo" value="afasto"><span>Eu me recolho. Fico quieto(a), saio, deixo para depois.</span></label>
+          <label class="opcao-pilula"><input type="radio" name="papel-ciclo" value="ambos"><span>Depende do dia. Às vezes persigo, às vezes sumo.</span></label>
+          <label class="opcao-pilula"><input type="radio" name="papel-ciclo" value="nao-sei"><span>Ainda não sei identificar.</span></label>
+        </fieldset>
+        <p class="pequeno texto-suave" id="feedback-papel" style="margin-top:.8rem" aria-live="polite"></p>
+      </div>
+
+      <h2 style="margin-top:2.2rem">Desenhe o seu ciclo</h2>
+      <p class="texto-suave pequeno">Clique em cada etapa do círculo e escreva o que acontece de verdade entre vocês. Comece por onde for mais fácil.</p>
+
+      <div class="ciclo-caixa">
+        <div class="grafico-caixa">
+          <svg viewBox="0 0 340 300" role="img" aria-labelledby="titulo-ciclo">
+            <title id="titulo-ciclo">Diagrama circular do ciclo negativo do casal</title>
+            <!-- setas circulares -->
+            <g fill="none" stroke="#C7BFE3" stroke-width="2.5" stroke-linecap="round">
+              <!-- arcos no sentido horario, comecando e terminando fora das caixas para a ponta ficar visivel -->
+              <path d="M204.2 56 A 100 100 0 0 1 267 125.8" marker-end="url(#ponta)"/>
+              <path d="M268.5 167.4 A 100 100 0 0 1 213.8 239.9" marker-end="url(#ponta)"/>
+              <path d="M126.2 239.9 A 100 100 0 0 1 73 174.2" marker-end="url(#ponta)"/>
+              <path d="M73 125.8 A 100 100 0 0 1 135.8 56" marker-end="url(#ponta)"/>
+            </g>
+            <defs>
+              <marker id="ponta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#C7BFE3"/>
+              </marker>
+            </defs>
+            <text x="170" y="150" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="17" fill="#14514E">nosso ciclo</text>
+            <g class="no-ciclo" data-passo="0" tabindex="0" role="button" aria-label="Etapa 1: o que a outra pessoa faz">
+              <rect x="105" y="14" width="130" height="42" rx="14" fill="#E2EFED" stroke="#2E7C77" stroke-width="1.5"/>
+              <text x="170" y="32" text-anchor="middle">1. O que ele ou ela</text>
+              <text x="170" y="46" text-anchor="middle">faz ou deixa de fazer</text>
+            </g>
+            <g class="no-ciclo" data-passo="1" tabindex="0" role="button" aria-label="Etapa 2: o que eu sinto por dentro">
+              <rect x="228" y="126" width="106" height="42" rx="14" fill="#FBE7E1" stroke="#E98A7A" stroke-width="1.5"/>
+              <text x="281" y="144" text-anchor="middle">2. O que eu sinto</text>
+              <text x="281" y="158" text-anchor="middle">por dentro</text>
+            </g>
+            <g class="no-ciclo" data-passo="2" tabindex="0" role="button" aria-label="Etapa 3: o que eu faço">
+              <rect x="105" y="240" width="130" height="42" rx="14" fill="#EDE8F7" stroke="#6B5CA5" stroke-width="1.5"/>
+              <text x="170" y="258" text-anchor="middle">3. O que eu faço</text>
+              <text x="170" y="272" text-anchor="middle">quando sinto isso</text>
+            </g>
+            <g class="no-ciclo" data-passo="3" tabindex="0" role="button" aria-label="Etapa 4: o que a outra pessoa provavelmente sente">
+              <rect x="6" y="126" width="106" height="42" rx="14" fill="#F3EADF" stroke="#5B514C" stroke-width="1.5"/>
+              <text x="59" y="144" text-anchor="middle">4. O que ele ou ela</text>
+              <text x="59" y="158" text-anchor="middle">deve sentir</text>
+            </g>
+          </svg>
+        </div>
+        <div id="campos-ciclo"></div>
+      </div>
+
+      <h2 style="margin-top:2.2rem">Reflexão guiada</h2>
+      <div class="cartao">
+        <div id="campos-reflexao"></div>
+        <p class="privacidade">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          <span>Tudo o que você escreve aqui fica salvo apenas no seu navegador, neste dispositivo. Nada é enviado para lugar nenhum e ninguém, nem eu, tem acesso.</span>
+        </p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:2.2rem">Quando dois estilos se encontram</h2>
+    <p class="texto-suave pequeno">Nenhuma combinação está condenada e nenhuma é garantia. O que muda o destino de um casal é a consciência do ciclo, não a sorte no sorteio dos estilos.</p>
+    <div class="matriz" id="matriz-combos"></div>
+
+    <div class="navegacao">
+      <button class="btn btn-secundario nav-voltar" type="button">Voltar</button>
+      <span class="espaco"></span>
+      <button class="btn btn-acao nav-avancar" type="button">Ver meu plano de segurança</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TELA 5  -  MODULO 5: CONSTRUINDO APEGO SEGURO
+     ============================================================ -->
+<section class="tela" id="tela-5" aria-labelledby="titulo-m5">
+  <div class="container">
+    <span class="selo">Módulo 5 de 5</span>
+    <h1 id="titulo-m5">Segurança conquistada</h1>
+    <p>Existe um achado na pesquisa em apego que muda tudo: pessoas que cresceram em ambientes inseguros podem, na vida adulta, funcionar como pessoas seguras. Isso tem nome, <strong>segurança conquistada</strong>, e não depende de reescrever a infância. Depende de três coisas que estão ao seu alcance: viver relações corretivas, ou seja, experiências repetidas de alguém confiável respondendo bem; construir uma narrativa coerente sobre o que te aconteceu, que é boa parte do trabalho da psicoterapia; e treinar, no dia a dia, o oposto do que o medo manda fazer.</p>
+    <p>Repare no detalhe: o apego não muda por insight, muda por repetição de experiência nova. Por isso o plano abaixo é feito de práticas pequenas e repetíveis, não de decisões grandiosas.</p>
+
+    <div class="progresso-cuidado">
+      <h3 style="margin:0 0 .2rem; font-size:1.15rem">Construindo minha segurança</h3>
+      <p class="pequeno" style="margin:0" id="texto-progresso-praticas">Marque as práticas que você concluiu nesta semana.</p>
+      <div class="trilho-med" role="progressbar" aria-labelledby="texto-progresso-praticas" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="barra-praticas-wrap">
+        <div class="barra" id="barra-praticas"></div>
+      </div>
+      <p class="marco" id="marco-praticas" aria-live="polite"></p>
+    </div>
+
+    <div id="aviso-sem-questionario" class="cartao sal" hidden>
+      <p class="pequeno" style="margin:0">Você ainda não respondeu o questionário do Módulo 3, então este plano está mostrando as práticas gerais. Se quiser a versão personalizada, é só voltar e responder.</p>
+    </div>
+
+    <div id="lista-praticas"></div>
+
+    <div class="cta-terapia" style="margin-top:1.6rem">
+      <h2 style="margin-top:0">O caminho mais potente continua sendo relacional</h2>
+      <p>Todas as práticas desta página ajudam. Nenhuma delas, sozinha, faz o que uma relação terapêutica faz. Na psicoterapia acontece exatamente o que o apego precisa para mudar: alguém que escuta com constância, que aguenta o que você traz sem ir embora e que te ajuda a montar sentido no que sempre pareceu só bagunça. É uma base segura para treinar, em tempo real, um jeito novo de se relacionar.</p>
+      <p>Se você quer olhar isso com acompanhamento, eu atendo online adultos no Brasil e na Europa.</p>
+      <p><a class="btn" href="https://psicoterapiaeafins.com.br" target="_blank" rel="noopener">Conhecer a Psicoterapia e Afins</a></p>
+      <p class="mini" style="margin-top:.8rem">Paula Rodrigues, psicóloga clínica. Atendimento online para adultos.</p>
+    </div>
+
+    <div class="navegacao">
+      <button class="btn btn-secundario nav-voltar" type="button">Voltar</button>
+      <span class="espaco"></span>
+      <button class="btn btn-acao nav-avancar" type="button">Ver meu resumo</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TELA 6  -  RESUMO E ENCERRAMENTO
+     ============================================================ -->
+<section class="tela" id="tela-6" aria-labelledby="titulo-resumo">
+  <div class="container">
+    <span class="selo sal">Fim da jornada</span>
+    <h1 id="titulo-resumo">Seu resumo</h1>
+    <p>Isto aqui é o retrato de hoje. Daqui a alguns meses de trabalho, ele pode ser outro. Volte quando quiser marcar novas práticas ou refazer o questionário.</p>
+
+    <div id="resumo-conteudo"></div>
+
+    <div class="navegacao nao-imprimir">
+      <button class="btn btn-secundario nav-voltar" type="button">Voltar</button>
+      <span class="espaco"></span>
+      <button class="btn btn-acao" id="btn-imprimir" type="button">Baixar meu resumo</button>
+    </div>
+    <p class="mini texto-suave nao-imprimir" style="margin-top:.6rem">O botão abre a janela de impressão do seu navegador. Escolha "Salvar como PDF" no destino para guardar o arquivo.</p>
+
+    <div class="cartao creme" style="margin-top:2rem">
+      <h3>Recomeçar do zero</h3>
+      <p class="pequeno">Apaga todas as suas respostas, textos e práticas marcadas neste dispositivo. Não tem como desfazer.</p>
+      <button class="btn btn-secundario" id="btn-reiniciar" type="button">Apagar tudo e recomeçar</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     RODAPE
+     ============================================================ -->
+<footer class="rodape nao-imprimir">
+  <div class="container">
+    <h3>De onde vem esse conteúdo</h3>
+    <p class="pequeno texto-suave">Nada aqui foi inventado para soar bonito. Cada ideia deste recurso vem de um corpo de pesquisa com décadas de estrada, traduzido para a linguagem do dia a dia.</p>
+    <ul class="fontes">
+      <li><strong>John Bowlby</strong> criou a teoria do apego e mostrou que buscar proximidade é necessidade biológica, não fraqueza. Dele vêm as ideias de base segura, porto seguro e modelos internos.</li>
+      <li><strong>Mary Ainsworth</strong> levou a teoria para o laboratório e identificou os padrões seguro, ansioso e evitativo, mostrando o peso da sensibilidade responsiva de quem cuida.</li>
+      <li><strong>Mary Main e Judith Solomon</strong> descreveram o padrão desorganizado, que aparece quando a mesma pessoa é a fonte de conforto e de medo.</li>
+      <li><strong>Cindy Hazan e Phillip Shaver</strong> demonstraram que o amor romântico adulto funciona pelo mesmo sistema de apego da infância.</li>
+      <li><strong>Kim Bartholomew e Leonard Horowitz</strong> propuseram o modelo de quatro estilos adultos a partir da visão de si e da visão do outro.</li>
+      <li><strong>Chris Fraley, Niels Waller e Kelly Brennan</strong> mostraram que apego adulto se descreve melhor por duas dimensões contínuas, ansiedade e evitação. O questionário deste recurso é inspirado nessa lógica, com itens próprios, e não reproduz nenhum instrumento protegido.</li>
+      <li><strong>Mario Mikulincer e Phillip Shaver</strong> descreveram as estratégias de hiperativação e desativação do sistema de apego.</li>
+      <li><strong>Sue Johnson</strong>, criadora da Terapia Focada na Emoção para casais, mapeou os ciclos de perseguir e afastar e as conversas que reconectam.</li>
+      <li><strong>Paul Gilbert</strong>, da Terapia Focada na Compaixão, descreveu o sistema de acalmamento e afiliação, base fisiológica da sensação de segurança, e o uso da autocompaixão como regulação.</li>
+      <li><strong>Pesquisas sobre segurança conquistada</strong>, com Mary Main, Glenn Roisman e colegas, indicam que padrões de apego podem mudar ao longo da vida através de relações corretivas, psicoterapia e elaboração da própria história.</li>
+    </ul>
+
+    <details class="expansivel" style="margin-top:1.4rem">
+      <summary>Aviso ético completo e limites deste material</summary>
+      <div class="pequeno texto-suave">
+        <p>Este recurso tem finalidade exclusivamente psicoeducativa e de autoconhecimento. Ele não realiza diagnóstico, não substitui avaliação psicológica ou psiquiátrica e não constitui atendimento clínico. O questionário do Módulo 3 foi elaborado com itens originais inspirados nas dimensões de ansiedade e evitação descritas na literatura sobre apego adulto, mas não passou por processo de validação psicométrica, não possui normas populacionais brasileiras e seus resultados não têm valor pericial, ocupacional ou clínico.</p>
+        <p>Os conteúdos aqui não devem ser usados para rotular terceiros, justificar comportamentos abusivos ou tomar decisões sobre relacionamentos sem apoio profissional. Violência física, sexual, patrimonial ou psicológica não é ciclo de apego: é violência, e pede rede de proteção. No Brasil, você pode acionar a Central de Atendimento à Mulher pelo 180 e, em situações de risco à vida, o 190. Se surgirem pensamentos de morte ou de se machucar, procure o CVV pelo 188, ligação gratuita, 24 horas, ou o CAPS mais próximo.</p>
+        <p>Nenhum dado é coletado, transmitido ou armazenado fora do seu dispositivo. As respostas ficam no armazenamento local do seu navegador e podem ser apagadas por você a qualquer momento pelo botão de recomeçar, ou limpando os dados do site.</p>
+      </div>
+    </details>
+
+    <p class="mini texto-suave" style="margin-top:1.6rem">Conteúdo, redação e desenvolvimento: <strong>Paula Rodrigues</strong>, psicóloga clínica, CRP ativo. Psicoterapia e Afins, atendimento online para adultos no Brasil e na Europa. Uso livre para fins pessoais e educativos, com crédito.</p>
+  </div>
+</footer>
+
+<!-- Area exclusiva de impressao, montada por JavaScript -->
+<div id="area-impressao" aria-hidden="true"></div>
+
+<script>
+(function(){
+'use strict';
+
+/* ============================================================
+   1. ARMAZENAMENTO LOCAL
+   Tudo fica no navegador. Se o localStorage estiver bloqueado
+   (acontece em alguns iframes), caimos para memoria volatil.
+   ============================================================ */
+var CHAVE = 'pea_apego_v1';
+var memoriaVolatil = null;
+
+function podeUsarStorage(){
+  try{ var t='__teste__'; window.localStorage.setItem(t,'1'); window.localStorage.removeItem(t); return true; }
+  catch(e){ return false; }
+}
+var TEM_STORAGE = podeUsarStorage();
+
+function estadoInicial(){
+  return {
+    versao:1,
+    tela:0,
+    mitos:{},                                  /* indice -> resposta booleana dada */
+    eixos:{si:null, outro:null},
+    jogo:{rodada:0, respostas:{}, ordem:null}, /* "rodada-indice" -> estilo escolhido */
+    quest:{},                                  /* id do item -> 1..5 */
+    resultado:null,                            /* {ansiedade, evitacao, estilo} */
+    relacao:{status:null, checklist:{}, papel:null, ciclo:['','','',''], reflexao:['','']},
+    praticas:{feitas:{}, extras:[], marcoVisto:0}
+  };
+}
+
+var estado = carregar();
+
+function carregar(){
+  try{
+    var bruto = TEM_STORAGE ? window.localStorage.getItem(CHAVE) : memoriaVolatil;
+    if(!bruto) return estadoInicial();
+    var obj = JSON.parse(bruto);
+    var base = estadoInicial();
+    /* mescla rasa para sobreviver a versoes antigas do arquivo */
+    for(var k in base){ if(obj[k] !== undefined && obj[k] !== null) base[k] = obj[k]; }
+    return base;
+  }catch(e){ return estadoInicial(); }
+}
+
+function salvar(){
+  try{
+    var bruto = JSON.stringify(estado);
+    if(TEM_STORAGE) window.localStorage.setItem(CHAVE, bruto);
+    else memoriaVolatil = bruto;
+  }catch(e){ /* silencioso: nunca quebrar a experiencia por causa do storage */ }
+}
+
+function temProgressoSalvo(){
+  return estado.tela > 0 || Object.keys(estado.quest).length > 0 || Object.keys(estado.mitos).length > 0;
+}
+
+/* atalhos de DOM */
+function $(s, ctx){ return (ctx||document).querySelector(s); }
+function $$(s, ctx){ return Array.prototype.slice.call((ctx||document).querySelectorAll(s)); }
+function esc(t){ return String(t).replace(/[&<>"']/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]; }); }
+
+/* ============================================================
+   2. FORMAS ORGANICAS POR ESTILO
+   Cada estilo tem uma forma com significado:
+   seguro equilibrada, ansioso expansiva, evitativo contida,
+   desorganizado fragmentada.
+   ============================================================ */
+var FORMAS = {
+  seguro:'<svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#2E7C77" fill-opacity=".85" d="M50 6c20 0 38 12 43 30 5 18-4 38-20 48-16 10-38 8-52-4C7 68 2 46 10 30 18 14 30 6 50 6z"/></svg>',
+  ansioso:'<svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#E98A7A" fill-opacity=".9" d="M52 2c12 8 30 2 39 15 9 13-3 27 1 41 4 14-10 27-25 30-15 3-31-2-41-13C15 63-2 52 2 37 6 22 20 18 28 10c8-8 12-8 24-8z"/></svg>',
+  evitativo:'<svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#6B5CA5" fill-opacity=".8" d="M37 30h26a11 11 0 0 1 11 11v18a11 11 0 0 1-11 11H37a11 11 0 0 1-11-11V41a11 11 0 0 1 11-11z"/><circle cx="50" cy="50" r="42" fill="none" stroke="#6B5CA5" stroke-opacity=".35" stroke-width="2" stroke-dasharray="5 7"/></svg>',
+  desorganizado:'<svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#E98A7A" fill-opacity=".8" d="M48 8c18-4 34 8 38 24 2 8-2 14-8 16-10 3-16-6-26-4-9 2-14 12-22 9C20 50 16 38 20 27 24 16 34 11 48 8z"/><path fill="#6B5CA5" fill-opacity=".7" d="M28 58c10-3 15 7 25 6 8-1 13-8 20-4 7 4 6 15 0 22-7 8-22 12-33 7-11-5-17-16-15-24 1-5 1-6 3-7z"/></svg>'
+};
+function forma(id){ return '<span class="forma" aria-hidden="true">'+FORMAS[id]+'</span>'; }
+
+var NOMES = {
+  seguro:'Seguro',
+  ansioso:'Ansioso-preocupado',
+  evitativo:'Evitativo-desapegado',
+  desorganizado:'Desorganizado-amedrontado'
+};
+var CURTOS = { seguro:'Seguro', ansioso:'Ansioso', evitativo:'Evitativo', desorganizado:'Desorganizado' };
+
+/* ============================================================
+   3. NAVEGACAO ENTRE TELAS
+   ============================================================ */
+var TOTAL_TELAS = 7;
+var ROTULOS = ['Comece por aqui','Módulo 1: o que é apego','Módulo 2: os quatro estilos','Módulo 3: meu estilo','Módulo 4: minha relação','Módulo 5: apego seguro','Seu resumo'];
+var telaAtiva = 0;
+
+function irPara(n, semRolar){
+  n = Math.max(0, Math.min(TOTAL_TELAS-1, n));
+  telaAtiva = n;
+  /* a capa nao sobrescreve o progresso salvo, para o atalho de retomada continuar valendo */
+  if(n > 0){ estado.tela = n; salvar(); }
+  $$('.tela').forEach(function(t){ t.classList.remove('ativa'); });
+  var alvo = document.getElementById('tela-'+n);
+  alvo.classList.add('ativa');
+  atualizarProgresso();
+  if(n === 5) montarPraticas();
+  if(n === 6) montarResumo();
+  if(!semRolar){
+    var topo = $('.topo');
+    var y = alvo.getBoundingClientRect().top + window.pageYOffset - (topo ? topo.offsetHeight + 8 : 0);
+    try{ window.scrollTo({top:Math.max(0,y), behavior:'smooth'}); }catch(e){ window.scrollTo(0, Math.max(0,y)); }
+  }
+}
+
+function atualizarProgresso(){
+  var pct = Math.round((telaAtiva/(TOTAL_TELAS-1))*100);
+  $('#trilho-preenchido').style.width = pct+'%';
+  $('#barra-progresso').setAttribute('aria-valuenow', pct);
+  $('#etapa-rotulo').textContent = ROTULOS[telaAtiva];
+}
+
+$$('.nav-avancar').forEach(function(b){ b.addEventListener('click', function(){ irPara(telaAtiva+1); }); });
+$$('.nav-voltar').forEach(function(b){ b.addEventListener('click', function(){ irPara(telaAtiva-1); }); });
+$('#btn-comecar').addEventListener('click', function(){ irPara(1); });
+
+/* ============================================================
+   4. MODULO 1  -  QUIZ MITO OU CIENCIA
+   ============================================================ */
+var MITOS = [
+  { txt:'Apego evitativo significa que a pessoa não ama de verdade.',
+    verdadeiro:false,
+    fb:'Ama, e muitas vezes com intensidade. O que essa pessoa aprendeu foi que mostrar necessidade dá problema, então ela desliga o sinal, não o sentimento.' },
+  { txt:'Seu estilo de apego é definido na infância e não muda mais.',
+    verdadeiro:false,
+    fb:'A pesquisa sobre segurança conquistada mostra o contrário: relações confiáveis, psicoterapia e elaboração da própria história mudam o padrão ao longo da vida.' },
+  { txt:'Pessoas com apego seguro nunca sentem ciúme nem insegurança.',
+    verdadeiro:false,
+    fb:'Sentem sim. A diferença é o que vem depois: o alarme desliga mais rápido e elas conseguem falar do que sentiram em vez de atacar ou sumir.' },
+  { txt:'Precisar do outro é sinal de imaturidade emocional.',
+    verdadeiro:false,
+    fb:'Bowlby mostrou que buscar proximidade é um sistema inato que nos acompanha a vida inteira. Maturidade não é deixar de precisar, é saber pedir.' },
+  { txt:'Pessoas ansiosas e pessoas evitativas costumam se atrair.',
+    verdadeiro:true,
+    fb:'Essa é a dança mais comum na clínica. Cada um confirma o pior medo do outro: quem persegue prova que intimidade sufoca, quem se afasta prova que amor não é confiável.' },
+  { txt:'O estilo de apego aparece no jeito de brigar, não só no jeito de amar.',
+    verdadeiro:true,
+    fb:'É no conflito que o sistema liga. Sob estresse, aparece hiperativação, que é insistir e cobrar, ou desativação, que é silenciar e se afastar.' },
+  { txt:'Ou você é de um estilo, ou é de outro: são caixinhas fechadas.',
+    verdadeiro:false,
+    fb:'A pesquisa atual trabalha com duas réguas contínuas, ansiedade e evitação. Você tem uma dose de cada, e a dose muda conforme a relação e o momento.' },
+  { txt:'Quem gerou apego inseguro em um filho foi necessariamente um mau cuidador.',
+    verdadeiro:false,
+    fb:'Quase nunca é maldade. É cansaço, luto, adoecimento, pobreza, história própria não elaborada. Entender o contexto é diferente de distribuir culpa.' }
+];
+
+function montarMitos(){
+  var alvo = $('#lista-mitos'); alvo.innerHTML = '';
+  MITOS.forEach(function(m, i){
+    var div = document.createElement('div');
+    div.className = 'mito'; div.id = 'mito-'+i;
+    div.innerHTML =
+      '<p class="afirmacao">'+esc(m.txt)+'</p>'+
+      '<div class="opcoes">'+
+        '<button class="btn btn-secundario" type="button" data-i="'+i+'" data-v="true">Ciência</button>'+
+        '<button class="btn btn-secundario" type="button" data-i="'+i+'" data-v="false">Mito</button>'+
+      '</div>'+
+      '<div class="resposta" role="status"></div>';
+    alvo.appendChild(div);
+  });
+  $$('#lista-mitos .opcoes button').forEach(function(b){
+    b.addEventListener('click', function(){
+      responderMito(parseInt(b.dataset.i,10), b.dataset.v === 'true');
+    });
+  });
+  /* restaura respostas ja dadas */
+  Object.keys(estado.mitos).forEach(function(i){ pintarMito(parseInt(i,10), estado.mitos[i]); });
+  atualizarPlacarMitos();
+}
+
+function responderMito(i, resposta){
+  if(estado.mitos[i] !== undefined) return;
+  estado.mitos[i] = resposta; salvar();
+  pintarMito(i, resposta);
+  atualizarPlacarMitos();
+}
+
+function pintarMito(i, resposta){
+  var m = MITOS[i], div = document.getElementById('mito-'+i);
+  if(!div) return;
+  var certo = (resposta === m.verdadeiro);
+  var cx = $('.resposta', div);
+  cx.className = 'resposta ' + (certo ? 'certo' : 'errado');
+  cx.innerHTML = '<span class="rotulo">'+(certo ? 'Isso mesmo. ' : 'Quase. ')+
+    'A afirmação é '+(m.verdadeiro ? 'ciência' : 'mito')+'.</span>'+esc(m.fb);
+  div.classList.add('respondido');
+}
+
+function atualizarPlacarMitos(){
+  var chaves = Object.keys(estado.mitos);
+  var caixa = $('#placar-mitos');
+  if(chaves.length < MITOS.length){ caixa.classList.remove('visivel'); return; }
+  var acertos = chaves.reduce(function(soma, i){
+    return soma + (estado.mitos[i] === MITOS[i].verdadeiro ? 1 : 0);
+  }, 0);
+  var msg;
+  if(acertos >= 7) msg = 'Você já chega aqui com uma boa bússola. O que vem a seguir vai dar nome e mecanismo para o que você intuía.';
+  else if(acertos >= 4) msg = 'Boa. Metade do caminho de desmontar mito é justamente descobrir o que a gente repetia sem checar.';
+  else msg = 'E está tudo bem. Essas ideias circulam tanto que quase todo mundo aprendeu errado. É exatamente por isso que este módulo existe.';
+  caixa.innerHTML = '<strong>'+acertos+' de '+MITOS.length+'.</strong> '+esc(msg);
+  caixa.classList.add('visivel');
+}
+
+/* ============================================================
+   5. MODULO 1  -  SELETOR DOS DOIS EIXOS
+   ============================================================ */
+var COMBINACOES = {
+  'positivo|positivo':{ id:'seguro', txt:'Quem cresce com essas duas lentes tende a pedir sem medo de virar peso e a confiar sem precisar de prova o tempo todo. Proximidade e autonomia convivem.' },
+  'negativo|positivo':{ id:'ansioso', txt:'Aqui a pessoa acredita nos outros, mas duvida do próprio valor. O resultado é buscar confirmação constante e ficar em alerta a qualquer sinal de distância.' },
+  'positivo|negativo':{ id:'evitativo', txt:'A pessoa confia em si e desconfia dos outros. A saída aprendida é se bastar: melhor não precisar do que precisar e não ser atendido.' },
+  'negativo|negativo':{ id:'desorganizado', txt:'Duas dúvidas ao mesmo tempo: não sei se mereço e não sei se posso confiar. Vem daí o vaivém de querer muito perto e se assustar quando chega perto.' }
+};
+
+function atualizarEixos(){
+  var caixa = $('#resultado-eixos');
+  if(!estado.eixos.si || !estado.eixos.outro){
+    caixa.innerHTML = '<p class="texto-suave pequeno" style="margin:0">Escolha uma opção de cada lado para ver qual estilo essa combinação costuma gerar.</p>';
+    return;
+  }
+  var c = COMBINACOES[estado.eixos.si+'|'+estado.eixos.outro];
+  caixa.innerHTML = forma(c.id)+'<div><h4>'+esc(NOMES[c.id])+'</h4><p>'+esc(c.txt)+'</p></div>';
+}
+
+$$('input[name="eixo-si"], input[name="eixo-outro"]').forEach(function(inp){
+  inp.addEventListener('change', function(){
+    if(inp.name === 'eixo-si') estado.eixos.si = inp.value;
+    else estado.eixos.outro = inp.value;
+    salvar(); atualizarEixos();
+  });
+});
+
+/* ============================================================
+   6. MODULO 2  -  OS QUATRO ESTILOS
+   ============================================================ */
+var ESTILOS = [
+  {
+    id:'seguro', apelido:'Confio e me conecto',
+    formacao:'Teve, na maior parte do tempo, alguém razoavelmente previsível por perto. Não perfeito: previsível. Quando chorava, alguém vinha. Quando ficava bravo, o vínculo não acabava. Aprendeu duas coisas ao mesmo tempo: o mundo é explorável e existe para onde voltar.',
+    comportamentos:[
+      'Consegue dizer o que sente sem transformar em acusação',
+      'Fica incomodado com distância, mas pergunta em vez de vigiar',
+      'Aceita pedido de espaço sem ler como abandono',
+      'Briga sobre o assunto da briga, não sobre os últimos cinco anos',
+      'Depois do conflito, procura reparar em vez de punir com silêncio'
+    ],
+    medo:'Também sente medo de perder quem ama. A diferença é que o medo não vira estratégia automática.',
+    estrategia:'Sistema de apego bem calibrado: liga quando precisa, desliga quando o contato acontece.',
+    cena:'A mensagem não foi respondida há horas. Sente um incômodo, pensa que provavelmente é trabalho, segue o dia. À noite comenta: senti sua falta hoje, achei que tinha acontecido alguma coisa.'
+  },
+  {
+    id:'ansioso', apelido:'Preciso de garantias',
+    formacao:'O cuidado existiu, mas em ritmo imprevisível. Um dia colo, outro dia ausência, sem que a criança conseguisse descobrir a regra. Quando o afeto é loteria, a estratégia que funciona é aumentar o volume do pedido: insistir, chorar mais alto, grudar. E funcionava, às vezes.',
+    comportamentos:[
+      'Relê mensagens procurando sinais escondidos de esfriamento',
+      'Precisa resolver a briga agora, não consegue dormir com o assunto aberto',
+      'Faz testes: some um pouco para ver se a pessoa vai atrás',
+      'Sente o humor do dia inteiro depender do tom de voz do parceiro',
+      'Se cobra depois: por que fui insistir tanto de novo'
+    ],
+    medo:'Ser abandonado. E, no fundo, a conclusão antiga de que não é suficiente para fazer alguém ficar.',
+    estrategia:'Hiperativação. Diante da distância, o sistema aumenta o sinal: cobrar, buscar, protestar, vigiar. É um pedido de socorro fantasiado de exigência.',
+    cena:'Ele avisa que vai chegar tarde. Ela responde tudo bem e passa duas horas montando cenários. Quando ele chega, sai uma frase que nem era a que ela queria dizer: você não liga mais para mim.'
+  },
+  {
+    id:'evitativo', apelido:'Me viro sozinho',
+    formacao:'Aprendeu cedo que demanda emocional incomoda. Talvez tenha ouvido que era exagero, que homem não chora, que aquilo não era motivo. Talvez o cuidador amasse muito e simplesmente não soubesse lidar com choro. A criança fez a conta certa: se pedir gera desconforto, é mais seguro não pedir.',
+    comportamentos:[
+      'Resolve os próprios problemas sozinho e conta depois, se contar',
+      'Em discussão, fica em silêncio, responde curto ou sai da sala',
+      'Depois de um momento muito íntimo, sente vontade de se afastar',
+      'Valoriza a independência como se fosse a virtude central da relação',
+      'Quando a relação fica séria, começa a reparar mais nos defeitos do outro'
+    ],
+    medo:'Ser invadido, sufocado, controlado. E, mais fundo, a certeza antiga de que precisar do outro termina em decepção.',
+    estrategia:'Desativação. Diante da ativação emocional, o sistema baixa o som: minimizar, racionalizar, distrair, se afastar. Estudos mostram que o corpo continua estressado mesmo quando a pessoa relata estar de boa.',
+    cena:'Ela chora e pede colo. Ele começa a listar soluções práticas, depois lembra que precisa resolver algo no computador. Não é desprezo. É o único jeito que ele aprendeu de sobreviver a emoção intensa.'
+  },
+  {
+    id:'desorganizado', apelido:'Quero perto, tenho medo de perto',
+    formacao:'Quando a mesma pessoa que deveria acalmar é também a fonte do susto, a criança fica sem estratégia possível. Correr para o cuidador e fugir dele viram o mesmo movimento. Esse padrão costuma aparecer em histórias com violência, negligência grave, adoecimento severo ou perdas não elaboradas em casa.',
+    comportamentos:[
+      'Alterna entre aproximação intensa e vontade de romper sem aviso',
+      'Sente uma onda de raiva ou pânico logo depois de um momento bom',
+      'Testa o vínculo com ameaças de término que não queria fazer',
+      'Congela em conflitos: quer falar e não sai voz',
+      'Depois, sente vergonha e não entende o que passou por si'
+    ],
+    medo:'Os dois medos ao mesmo tempo: ser abandonado e ser machucado por quem chega perto.',
+    estrategia:'Alternância entre hiperativar e desativar, sem estabilidade. Costuma vir acompanhado de reações fortes do corpo, e é o padrão que mais se beneficia de acompanhamento clínico.',
+    cena:'Fim de semana ótimo, os dois próximos. Na segunda, sem motivo aparente, vem um impulso de sumir. Ela manda uma mensagem seca, depois um áudio pedindo desculpa, e termina o dia exausta de si mesma.'
+  }
+];
+
+function montarEstilos(){
+  var alvo = $('#lista-estilos'); alvo.innerHTML = '';
+  ESTILOS.forEach(function(e, i){
+    var art = document.createElement('article');
+    art.className = 'estilo'; art.id = 'estilo-'+e.id;
+    art.innerHTML =
+      '<button class="estilo-cabecalho" type="button" aria-expanded="false" aria-controls="corpo-'+e.id+'">'+
+        forma(e.id)+
+        '<span class="nomes"><span class="nome">'+esc(NOMES[e.id])+'</span><span class="apelido">'+esc(e.apelido)+'</span></span>'+
+        '<svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'+
+      '</button>'+
+      '<div class="estilo-corpo" id="corpo-'+e.id+'">'+
+        '<h4>Como se formou</h4><p class="pequeno">'+esc(e.formacao)+'</p>'+
+        '<h4>Como aparece no amor adulto</h4><ul class="pequeno">'+e.comportamentos.map(function(c){ return '<li>'+esc(c)+'</li>'; }).join('')+'</ul>'+
+        '<h4>O medo central</h4><p class="pequeno">'+esc(e.medo)+'</p>'+
+        '<h4>A estratégia</h4><p class="pequeno">'+esc(e.estrategia)+'</p>'+
+        '<div class="cena"><strong>Uma cena comum</strong>'+esc(e.cena)+'</div>'+
+      '</div>';
+    alvo.appendChild(art);
+  });
+  $$('.estilo-cabecalho').forEach(function(b){
+    b.addEventListener('click', function(){
+      var art = b.parentNode, aberto = art.classList.toggle('aberto');
+      b.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+    });
+  });
+}
+
+/* ============================================================
+   7. MODULO 2  -  MINI-GAME "DE QUEM E ESSA REACAO?"
+   ============================================================ */
+var JOGO = [
+  { situacao:'Sua mensagem foi lida há três horas e não teve resposta.', reacoes:[
+    { estilo:'ansioso', fala:'Mando mais duas mensagens, checo o celular a cada minuto e começo a revisar o que eu disse de errado.',
+      porque:'Hiperativação pura: diante do silêncio, o sistema aumenta o volume do pedido para garantir que o outro ainda está lá.' },
+    { estilo:'evitativo', fala:'Guardo o celular. E, quando ela responder, também não vou responder na hora. Não vou ficar dependendo disso.',
+      porque:'Desativação: como precisar dói, a pessoa se antecipa e corta o próprio desejo de contato antes que ele a exponha.' },
+    { estilo:'seguro', fala:'Fico incomodado, suponho que esteja num dia corrido, e à noite comento que senti falta.',
+      porque:'O alarme toca, mas não vira estratégia. O incômodo vira informação a ser dita, não uma cobrança nem um sumiço.' },
+    { estilo:'desorganizado', fala:'Passo a tarde entre escrever um áudio longo pedindo atenção e a vontade de bloquear e apagar tudo.',
+      porque:'Os dois sistemas ligam juntos: aproximar e fugir ao mesmo tempo, sem uma estratégia estável para acalmar o medo.' }
+  ]},
+  { situacao:'Seu par pede um fim de semana sozinho para descansar.', reacoes:[
+    { estilo:'seguro', fala:'Estranho um pouco, pergunto como ele está, combinamos de nos falar no domingo e aproveito meu tempo.',
+      porque:'Pedido de espaço é lido como necessidade do outro, não como sentença sobre o vínculo. Dá para checar sem acusar.' },
+    { estilo:'ansioso', fala:'Digo que tudo bem, mas passo o fim de semana vendo se ele está online e ensaiando a conversa de cobrança.',
+      porque:'O medo de abandono transforma distância em ameaça. A vigilância é a tentativa de recuperar previsibilidade.' },
+    { estilo:'evitativo', fala:'Acho ótimo, é assim que tem que ser. Nem pergunto o motivo.',
+      porque:'A distância alivia. O risco silencioso é que a autonomia vira muro, e o casal perde a chance de conversar sobre o que está acontecendo.' },
+    { estilo:'desorganizado', fala:'Aceito na hora e, no dia seguinte, mando uma mensagem dizendo que talvez seja melhor a gente terminar.',
+      porque:'Quando o abandono parece inevitável, romper primeiro parece a forma menos dolorosa de controlar a dor.' }
+  ]},
+  { situacao:'Uma discussão sobre dinheiro esquentou e as vozes subiram.', reacoes:[
+    { estilo:'evitativo', fala:'Respondo com frases curtas, fico em silêncio e saio para dar uma volta. Depois sigo como se nada tivesse acontecido.',
+      porque:'Desativação sob estresse: sair reduz a ativação interna, mas o outro costuma ler como abandono no meio do fogo.' },
+    { estilo:'desorganizado', fala:'Grito coisas que eu nem penso, depois choro e peço desculpas sem entender direito o que passou por mim.',
+      porque:'A ativação vem em ondas, sem regulação estável. Raiva e pânico se alternam rápido, e a vergonha chega depois.' },
+    { estilo:'ansioso', fala:'Não consigo deixar para depois. Se ele sair da sala, vou atrás. Preciso resolver isso agora.',
+      porque:'Para quem hiperativa, conflito em aberto é ameaça ativa. Perseguir é a tentativa de restaurar o vínculo imediatamente.' },
+    { estilo:'seguro', fala:'Peço uma pausa de vinte minutos, digo que quero resolver e volto para conversar.',
+      porque:'Regula primeiro, conversa depois, e sinaliza que a pausa não é abandono. Isso mantém os dois sistemas de apego calmos.' }
+  ]},
+  { situacao:'Seu par esqueceu uma data importante para vocês.', reacoes:[
+    { estilo:'ansioso', fala:'Digo que não tem problema, mas passo o dia distante esperando que ele perceba o quanto me magoou.',
+      porque:'É um protesto de apego indireto. O afastamento aqui não é desinteresse, é um pedido de atenção que não conseguiu virar frase.' },
+    { estilo:'seguro', fala:'Falo que fiquei triste e explico o que aquela data significa para mim.',
+      porque:'Nomear o sentimento e o significado, sem julgar o caráter do outro, é o que permite reparo em vez de escalada.' },
+    { estilo:'evitativo', fala:'Nem comento. Data é bobagem, prefiro não fazer drama por isso.',
+      porque:'Minimizar a própria necessidade é desativação: se eu não preciso, não posso ser decepcionado.' },
+    { estilo:'desorganizado', fala:'Solto uma ironia, depois tento consertar com um presente, dividido entre a raiva e o medo de ter estragado tudo.',
+      porque:'Aproximação e agressão saem misturadas, porque a mesma pessoa é vivida como fonte de conforto e de ameaça.' }
+  ]},
+  { situacao:'Depois de uma noite muito íntima e boa, chega o dia seguinte.', reacoes:[
+    { estilo:'evitativo', fala:'Sinto uma necessidade estranha de espaço e invento compromissos para não nos vermos hoje.',
+      porque:'Intimidade ativa o sistema, e o sistema desativado responde criando distância para voltar ao ponto de conforto conhecido.' },
+    { estilo:'seguro', fala:'Mando uma mensagem dizendo que foi bom estar junto.',
+      porque:'Proximidade não gera alarme, então o impulso natural é prolongar o contato em vez de administrar risco.' },
+    { estilo:'desorganizado', fala:'Quero muito repetir e, ao mesmo tempo, penso em me afastar antes que isso doa.',
+      porque:'Quanto melhor foi, maior o medo do estrago. O bom vira sinal de perigo, e as duas estratégias disputam.' },
+    { estilo:'ansioso', fala:'Fico esperando a confirmação de que ele sentiu o mesmo e acabo perguntando se está tudo bem entre a gente.',
+      porque:'Sem prova externa, a dúvida sobre o próprio valor volta rápido. A pergunta é uma tentativa de reduzir a incerteza.' }
+  ]},
+  { situacao:'Seu par diz: preciso te contar uma coisa.', reacoes:[
+    { estilo:'desorganizado', fala:'Congelo. Uma parte quer ouvir, a outra quer sair de perto antes de escutar.',
+      porque:'Diante de ameaça sem saída, o corpo escolhe paralisar. É resposta fisiológica, não falta de vontade.' },
+    { estilo:'ansioso', fala:'Meu corpo entra em alerta, já imagino um término e peço para ele falar agora, seja o que for.',
+      porque:'A incerteza é vivida como perigo maior que a má notícia. Resolver logo é a forma de fazer o alarme parar.' },
+    { estilo:'seguro', fala:'Sinto um aperto, respiro e pergunto o que é.',
+      porque:'O medo aparece, mas não sequestra a ação. Dá para tolerar alguns segundos de incerteza sem entrar em pânico.' },
+    { estilo:'evitativo', fala:'Digo que a gente vê isso depois. Não vejo necessidade de conversa séria hoje.',
+      porque:'Adiar reduz a ativação agora. O custo é que o assunto se acumula e chega mais pesado depois.' }
+  ]}
+];
+
+/* embaralha uma vez e guarda a ordem, para o jogo nao mudar ao voltar */
+function ordemJogo(){
+  if(estado.jogo.ordem && estado.jogo.ordem.length === JOGO.length) return estado.jogo.ordem;
+  var ordem = JOGO.map(function(r){
+    var idx = r.reacoes.map(function(_,i){ return i; });
+    for(var i=idx.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=idx[i]; idx[i]=idx[j]; idx[j]=t; }
+    return idx;
+  });
+  estado.jogo.ordem = ordem; salvar();
+  return ordem;
+}
+
+function totalRespostasJogo(){ return Object.keys(estado.jogo.respostas).length; }
+function totalReacoes(){ return JOGO.length * 4; }
+
+function montarJogo(){
+  var alvo = $('#jogo-container');
+  var r = Math.min(estado.jogo.rodada, JOGO.length-1);
+  var rodada = JOGO[r], ordem = ordemJogo()[r];
+  var html = '<div class="jogo-situacao"><span class="rodada">Situação '+(r+1)+' de '+JOGO.length+'</span><p>'+esc(rodada.situacao)+'</p></div>';
+  ordem.forEach(function(idxOriginal, posicao){
+    var reacao = rodada.reacoes[idxOriginal];
+    var chave = r+'-'+idxOriginal;
+    var escolhido = estado.jogo.respostas[chave];
+    var resolvida = escolhido !== undefined;
+    var acerto = escolhido === reacao.estilo;
+    html += '<div class="jogo-reacao'+(resolvida ? ' resolvida '+(acerto?'acerto':'erro') : '')+'" id="reacao-'+chave+'">'+
+      '<p class="fala">"'+esc(reacao.fala)+'"</p>'+
+      '<div class="jogo-opcoes" role="group" aria-label="De qual estilo é a reação '+(posicao+1)+'">'+
+        ['seguro','ansioso','evitativo','desorganizado'].map(function(id){
+          return '<button type="button" data-chave="'+chave+'" data-estilo="'+id+'">'+CURTOS[id]+'</button>';
+        }).join('')+
+      '</div>'+
+      '<div class="explicacao" role="status">'+(resolvida ? textoExplicacao(reacao, escolhido) : '')+'</div>'+
+    '</div>';
+  });
+  var todasResolvidas = ordem.every(function(idx){ return estado.jogo.respostas[r+'-'+idx] !== undefined; });
+  html += '<div class="navegacao" style="margin-top:1rem">';
+  if(r > 0) html += '<button class="btn btn-secundario" id="jogo-anterior" type="button">Situação anterior</button>';
+  html += '<span class="espaco"></span>';
+  if(todasResolvidas && r < JOGO.length-1) html += '<button class="btn" id="jogo-proxima" type="button">Próxima situação</button>';
+  html += '</div>';
+  alvo.innerHTML = html;
+
+  $$('#jogo-container .jogo-opcoes button').forEach(function(b){
+    b.addEventListener('click', function(){
+      var chave = b.dataset.chave;
+      if(estado.jogo.respostas[chave] !== undefined) return;
+      estado.jogo.respostas[chave] = b.dataset.estilo; salvar();
+      montarJogo(); atualizarPlacarJogo();
+      /* devolve o foco para a explicacao recem aberta, para quem navega por teclado */
+      var alvoFoco = $('#reacao-'+chave+' .explicacao');
+      if(alvoFoco){ alvoFoco.setAttribute('tabindex','-1'); alvoFoco.focus({preventScroll:true}); }
+    });
+  });
+  var prox = $('#jogo-proxima');
+  if(prox) prox.addEventListener('click', function(){ estado.jogo.rodada = r+1; salvar(); montarJogo(); $('#jogo-container').scrollIntoView({block:'start'}); });
+  var ant = $('#jogo-anterior');
+  if(ant) ant.addEventListener('click', function(){ estado.jogo.rodada = r-1; salvar(); montarJogo(); $('#jogo-container').scrollIntoView({block:'start'}); });
+  atualizarPlacarJogo();
+}
+
+function textoExplicacao(reacao, escolhido){
+  var acerto = escolhido === reacao.estilo;
+  return '<span class="veredito">'+(acerto ? 'Isso mesmo: ' : 'Na verdade é ')+esc(NOMES[reacao.estilo])+'.</span>'+
+    (acerto ? '' : '<span class="pequeno">Você marcou '+esc(CURTOS[escolhido])+'. </span>')+esc(reacao.porque);
+}
+
+function atualizarPlacarJogo(){
+  var caixa = $('#placar-jogo');
+  var respondidas = totalRespostasJogo();
+  if(respondidas < totalReacoes()){ caixa.classList.remove('visivel'); return; }
+  var acertos = 0;
+  JOGO.forEach(function(rodada, r){
+    rodada.reacoes.forEach(function(reacao, i){
+      if(estado.jogo.respostas[r+'-'+i] === reacao.estilo) acertos++;
+    });
+  });
+  caixa.innerHTML = '<strong>'+acertos+' de '+totalReacoes()+' reações identificadas.</strong> '+
+    'O placar aqui importa pouco. O que importa é o que você percebeu no caminho: por trás de comportamentos muito diferentes, existe sempre um medo tentando se proteger. ' +
+    'Agora que você reconhece os estilos nos outros, vamos olhar para o seu.';
+  caixa.classList.add('visivel');
+}
+
+/* ============================================================
+   8. MODULO 3  -  QUESTIONARIO
+   dim: 'A' = ansiedade de apego, 'E' = evitacao de apego
+   rev: item reverso (pontuacao invertida)
+   ============================================================ */
+var ITENS = [
+  { id:'A1', dim:'A', rev:false, txt:'Fico inquieto quando a pessoa que amo demora a responder minhas mensagens.' },
+  { id:'E1', dim:'E', rev:false, txt:'Prefiro resolver meus problemas sozinho a dividir o que estou sentindo.' },
+  { id:'A2', dim:'A', rev:false, txt:'Preciso de sinais frequentes de que ainda sou querido pela pessoa com quem estou.' },
+  { id:'E2', dim:'E', rev:false, txt:'Quando querem conversar comigo sobre sentimentos, fico impaciente ou mudo de assunto.' },
+  { id:'A3', dim:'A', rev:false, txt:'Tenho medo de que a pessoa se canse de mim com o tempo.' },
+  { id:'E3', dim:'E', rev:true,  txt:'Me sinto à vontade quando meu par busca muita proximidade e intimidade.' },
+  { id:'A4', dim:'A', rev:false, txt:'Quando percebo uma mudança no tom de voz do meu par, logo penso que fiz algo errado.' },
+  { id:'E4', dim:'E', rev:false, txt:'Depois de um momento de muita proximidade, sinto vontade de me recolher um pouco.' },
+  { id:'A5', dim:'A', rev:false, txt:'Depois de uma briga, não consigo pensar em outra coisa até a gente resolver.' },
+  { id:'E5', dim:'E', rev:false, txt:'Contar o que me machuca me deixa exposto demais.' },
+  { id:'A6', dim:'A', rev:false, txt:'Releio conversas procurando algum sinal escondido do que a pessoa quis dizer.' },
+  { id:'E6', dim:'E', rev:true,  txt:'Consigo pedir ajuda ao meu par quando estou mal.' },
+  { id:'A7', dim:'A', rev:true,  txt:'Consigo ficar em paz quando meu par passa alguns dias mais distante.' },
+  { id:'E7', dim:'E', rev:false, txt:'Em uma discussão, costumo me fechar, ficar em silêncio ou sair da conversa.' },
+  { id:'A8', dim:'A', rev:false, txt:'Quando sinto a pessoa se afastando, tenho vontade de insistir no contato.' },
+  { id:'E8', dim:'E', rev:false, txt:'Manter minha independência importa mais para mim do que manter proximidade.' },
+  { id:'A9', dim:'A', rev:false, txt:'Costumo sentir que me importo mais com a relação do que a outra pessoa.' },
+  { id:'E9', dim:'E', rev:true,  txt:'Falo abertamente sobre meus medos e inseguranças com quem eu amo.' },
+  { id:'A10',dim:'A', rev:false, txt:'Meu humor no dia depende bastante de como fui tratado pela pessoa amada.' },
+  { id:'E10',dim:'E', rev:false, txt:'Quando a relação fica séria, começo a reparar mais nos defeitos da outra pessoa.' }
+];
+var ROTULOS_LIKERT = ['Discordo totalmente','Discordo em parte','Mais ou menos','Concordo em parte','Concordo totalmente'];
+
+function montarItens(){
+  var alvo = $('#lista-itens'); alvo.innerHTML = '';
+  ITENS.forEach(function(item, i){
+    var div = document.createElement('div');
+    div.className = 'item'; div.id = 'item-'+item.id;
+    var opcoes = ROTULOS_LIKERT.map(function(rot, k){
+      var v = k+1, marcado = estado.quest[item.id] === v ? ' checked' : '';
+      return '<label>'+
+        '<input type="radio" name="q-'+item.id+'" value="'+v+'"'+marcado+' aria-label="'+esc(rot)+'">'+
+        '<span class="bolha"></span>'+
+        '<span class="rotulo-likert">'+esc(rot)+'</span>'+
+      '</label>';
+    }).join('');
+    div.innerHTML = '<fieldset><legend><span class="numero">'+(i+1)+'.</span>'+esc(item.txt)+'</legend><div class="likert">'+opcoes+'</div></fieldset>';
+    alvo.appendChild(div);
+  });
+  $$('#lista-itens input[type=radio]').forEach(function(inp){
+    inp.addEventListener('change', function(){
+      var id = inp.name.slice(2);
+      estado.quest[id] = parseInt(inp.value,10);
+      salvar();
+      var pai = document.getElementById('item-'+id);
+      if(pai) pai.classList.remove('pendente');
+      atualizarContador();
+    });
+  });
+  atualizarContador();
+}
+
+function atualizarContador(){
+  var n = ITENS.filter(function(i){ return estado.quest[i.id]; }).length;
+  $('#contador-texto').textContent = n+' de '+ITENS.length+' respondidas';
+  $('#mini-preenchido').style.width = Math.round(n/ITENS.length*100)+'%';
+}
+
+/* escore bruto 10 a 50 por dimensao, convertido para 0 a 100 */
+function calcularEscores(){
+  var somaA = 0, somaE = 0, nA = 0, nE = 0;
+  ITENS.forEach(function(item){
+    var v = estado.quest[item.id];
+    if(!v) return;
+    var pontos = item.rev ? (6 - v) : v;
+    if(item.dim === 'A'){ somaA += pontos; nA++; } else { somaE += pontos; nE++; }
+  });
+  var maxA = nA*5, minA = nA*1, maxE = nE*5, minE = nE*1;
+  return {
+    ansiedade: nA ? Math.round((somaA - minA)/(maxA - minA)*100) : 0,
+    evitacao:  nE ? Math.round((somaE - minE)/(maxE - minE)*100) : 0
+  };
+}
+
+/* o corte fica no meio da escala. quem marca exatamente 50 cai no lado baixo,
+   para que respostas neutras nao virem um rotulo pesado sem sustentacao */
+function estiloPor(ans, evi){
+  if(ans <= 50 && evi <= 50) return 'seguro';
+  if(ans > 50 && evi <= 50) return 'ansioso';
+  if(ans <= 50 && evi > 50) return 'evitativo';
+  return 'desorganizado';
+}
+function faixa(v){ return v < 35 ? 'baixa' : (v < 60 ? 'moderada' : 'alta'); }
+/* quando os escores ficam perto do centro do grafico, o rotulo diz pouco */
+function pertoDoCentro(r){ return (r.ansiedade >= 38 && r.ansiedade <= 62) || (r.evitacao >= 38 && r.evitacao <= 62); }
+
+var FRASES_ESTILO = {
+  seguro:'Suas respostas apontam para um funcionamento mais seguro: você tende a tolerar a distância sem entrar em pânico e a intimidade sem sentir invasão. Isso não significa ausência de medo, significa que o medo não costuma dirigir o carro.',
+  ansioso:'Suas respostas apontam para uma tendência ansiosa: o vínculo importa muito e a distância acende um alarme rápido. Sua estratégia mais provável é a hiperativação, ou seja, buscar, cobrar e checar até sentir o vínculo de volta.',
+  evitativo:'Suas respostas apontam para uma tendência evitativa: você lida bem sozinho e sente desconforto quando a intimidade aperta. Sua estratégia mais provável é a desativação, ou seja, minimizar a necessidade e criar distância para reduzir a ativação.',
+  desorganizado:'Suas respostas apontam para as duas coisas ao mesmo tempo: desejo forte de proximidade e desconforto forte quando ela acontece. Esse padrão costuma cansar muito, porque as duas estratégias disputam o comando, e é o que mais se beneficia de acompanhamento clínico.'
+};
+
+function montarResultadoQuest(){
+  var r = estado.resultado;
+  if(!r) return;
+  var caixa = $('#resultado-quest');
+  caixa.hidden = false;
+
+  $('#nome-estilo').textContent = NOMES[r.estilo];
+  $('#frase-estilo').textContent = FRASES_ESTILO[r.estilo];
+  $('#valor-ansiedade').textContent = r.ansiedade;
+  $('#valor-evitacao').textContent = r.evitacao;
+  $('#faixa-ansiedade').textContent = 'Faixa '+faixa(r.ansiedade)+'.';
+  $('#faixa-evitacao').textContent = 'Faixa '+faixa(r.evitacao)+'.';
+
+  /* animacao leve: aplica os valores no proximo quadro */
+  window.requestAnimationFrame(function(){
+    $('#barra-ansiedade').style.width = r.ansiedade+'%';
+    $('#barra-evitacao').style.width = r.evitacao+'%';
+    var cx = 46 + (r.evitacao/100)*258;
+    var cy = 282 - (r.ansiedade/100)*258;
+    $('#ponto-halo').setAttribute('cx', cx); $('#ponto-halo').setAttribute('cy', cy);
+    $('#ponto-nucleo').setAttribute('cx', cx); $('#ponto-nucleo').setAttribute('cy', cy);
+  });
+
+  $('#leitura-dimensional').textContent =
+    'Você marcou '+r.ansiedade+' em 100 na régua de ansiedade de apego, faixa '+faixa(r.ansiedade)+
+    ', e '+r.evitacao+' em 100 na régua de evitação, faixa '+faixa(r.evitacao)+
+    '. Isso sugere uma tendência ao padrão '+NOMES[r.estilo].toLowerCase()+
+    ', com a ressalva de que os dois números convivem: '+leituraCombinada(r)+
+    (pertoDoCentro(r) ? ' Vale um cuidado extra na leitura: pelo menos um dos seus números ficou perto do meio do gráfico, ou seja, bem na fronteira entre dois quadrantes. Nesses casos o rótulo é o que menos importa. Segure ele bem de leve e olhe para os números.' : '');
+}
+
+function leituraCombinada(r){
+  if(r.ansiedade >= 50 && r.evitacao >= 50) return 'quando as duas réguas estão altas, é comum haver alternância entre grudar e sumir, às vezes na mesma semana.';
+  if(r.ansiedade >= 50) return 'quanto mais alta a ansiedade e mais baixa a evitação, mais a energia vai para buscar contato quando o vínculo parece ameaçado.';
+  if(r.evitacao >= 50) return 'quanto mais alta a evitação e mais baixa a ansiedade, mais a energia vai para reduzir a intensidade e retomar o controle sozinho.';
+  return 'com as duas réguas em faixa mais baixa, o sistema tende a ligar e desligar sem sequestrar a relação, o que não elimina dias difíceis.';
+}
+
+$('#btn-calcular').addEventListener('click', function(){
+  var faltando = ITENS.filter(function(i){ return !estado.quest[i.id]; });
+  var aviso = $('#aviso-faltando');
+  $$('#lista-itens .item').forEach(function(el){ el.classList.remove('pendente'); });
+  if(faltando.length){
+    aviso.textContent = 'Faltam '+faltando.length+(faltando.length === 1 ? ' item para responder.' : ' itens para responder.')+' Marquei em destaque para você localizar.';
+    faltando.forEach(function(i){ var el = document.getElementById('item-'+i.id); if(el) el.classList.add('pendente'); });
+    var primeiro = document.getElementById('item-'+faltando[0].id);
+    if(primeiro) primeiro.scrollIntoView({block:'center'});
+    return;
+  }
+  aviso.textContent = '';
+  var e = calcularEscores();
+  estado.resultado = { ansiedade:e.ansiedade, evitacao:e.evitacao, estilo:estiloPor(e.ansiedade, e.evitacao) };
+  estado.praticas.marcoVisto = 0;
+  salvar();
+  montarResultadoQuest();
+  $('#titulo-resultado').setAttribute('tabindex','-1');
+  $('#titulo-resultado').focus();
+  $('#resultado-quest').scrollIntoView({block:'start'});
+});
+
+/* ============================================================
+   9. MODULO 4  -  MINHA RELACAO ATUAL
+   ============================================================ */
+var CHECK_EFT = [
+  'A gente tem uma briga que se repete quase com o mesmo roteiro.',
+  'Quando sinto distância, eu procuro, cobro ou insisto.',
+  'Quando o clima esquenta, eu me fecho, silencio ou saio.',
+  'Já ouvi que eu cobro demais, ou já ouvi que eu sumo.',
+  'Consigo perceber um sentimento mais macio embaixo da minha reação, como medo, tristeza ou solidão.',
+  'Depois da briga, a gente consegue conversar sobre o que aconteceu entre nós.'
+];
+
+var FEEDBACK_PAPEL = {
+  persigo:'Quem persegue costuma ser lido como exigente, mas por dentro está pedindo garantia de que ainda importa. O trabalho aqui é aprender a mostrar o medo em vez de mostrar a cobrança, porque cobrança empurra a pessoa para ainda mais longe.',
+  afasto:'Quem se afasta costuma ser lido como frio, mas por dentro está tentando não piorar as coisas e não se afogar na própria ativação. O trabalho aqui é avisar que vai voltar, e voltar, porque o silêncio é lido como abandono pelo outro lado.',
+  ambos:'Alternar entre perseguir e se afastar é mais comum do que parece, principalmente em relações onde os dois estão inseguros. Ajuda observar o que dispara cada um dos movimentos em você.',
+  'nao-sei':'Sem problema. Reparar no próprio movimento leva tempo. Uma dica prática: na próxima vez que o clima pesar, observe o impulso do seu corpo nos primeiros trinta segundos. Ele costuma entregar o padrão.'
+};
+
+var ROTULOS_CICLO = {
+  em:[
+    'Etapa 1. O que ele ou ela faz, ou deixa de fazer, que dispara o meu alarme',
+    'Etapa 2. O que eu sinto por dentro quando isso acontece (embaixo da raiva costuma ter medo, tristeza ou solidão)',
+    'Etapa 3. O que eu faço quando sinto isso (o comportamento visível, aquilo que ele ou ela enxerga)',
+    'Etapa 4. O que ele ou ela provavelmente sente quando eu faço isso, e o que faz em seguida'
+  ],
+  sem:[
+    'Etapa 1. Nas minhas relações passadas, o que a outra pessoa costumava fazer que disparava o meu alarme',
+    'Etapa 2. O que eu sentia por dentro quando isso acontecia',
+    'Etapa 3. O que eu fazia quando sentia isso',
+    'Etapa 4. O que a outra pessoa provavelmente sentia, e o que fazia em seguida'
+  ]
+};
+var ROTULOS_REFLEXAO = {
+  em:[
+    'O que eu mais preciso ouvir do meu par quando estou mal, e que ainda não consegui pedir com essas palavras',
+    'O que eu faço que, sem querer, provavelmente ativa o medo da outra pessoa'
+  ],
+  sem:[
+    'O que eu mais precisava ouvir e nunca consegui pedir com essas palavras',
+    'O que eu costumava fazer que, sem querer, provavelmente ativava o medo da outra pessoa'
+  ]
+};
+
+var COMBOS = [
+  { t:'Ansioso e evitativo', d:'A dança mais frequente. Quanto mais um busca, mais o outro recua, e cada movimento confirma o pior medo do parceiro. Não é incompatibilidade: é um ciclo que se retroalimenta e que pode ser interrompido quando os dois passam a enxergá-lo como inimigo comum.' },
+  { t:'Ansioso e ansioso', d:'Muita intensidade dos dois lados. Brigas que esquentam rápido e reconciliações que também vêm rápido. O risco é o desgaste da montanha-russa. Ajuda muito combinar rituais previsíveis de reconexão fora do momento de crise.' },
+  { t:'Evitativo e evitativo', d:'Por fora, uma relação tranquila e sem brigas. Por dentro, uma distância que cresce em silêncio, até alguém perceber que virou convivência sem intimidade. O trabalho aqui é criar espaços combinados de conversa, já que nenhum dos dois vai puxar por impulso.' },
+  { t:'Seguro e ansioso', d:'A previsibilidade de quem tem apego mais seguro costuma acalmar o sistema do parceiro ansioso ao longo do tempo. Funciona quando a resposta é constante e clara, e não quando vira papel de terapeuta dentro de casa.' },
+  { t:'Seguro e evitativo', d:'Quem é mais seguro consegue tolerar a retirada do outro sem ler como rejeição, e isso reduz a pressão que faz o evitativo recuar mais ainda. O ponto de atenção é não normalizar a distância a ponto de a intimidade nunca acontecer.' },
+  { t:'Desorganizado e qualquer estilo', d:'Ondas de aproximação intensa seguidas de ruptura, muitas vezes sem gatilho visível. É a combinação que mais pede apoio profissional, porque costuma envolver história de trauma e reações que o corpo dispara antes de a pessoa escolher.' }
+];
+
+function montarModulo4(){
+  /* checklist EFT */
+  var alvoCheck = $('#checklist-eft');
+  alvoCheck.innerHTML = CHECK_EFT.map(function(t, i){
+    var marcado = estado.relacao.checklist[i] ? ' checked' : '';
+    return '<label class="check-linha"><input type="checkbox" data-i="'+i+'"'+marcado+'><span>'+esc(t)+'</span></label>';
+  }).join('');
+  $$('#checklist-eft input').forEach(function(inp){
+    inp.addEventListener('change', function(){
+      estado.relacao.checklist[inp.dataset.i] = inp.checked; salvar();
+    });
+  });
+
+  /* matriz de combinacoes */
+  $('#matriz-combos').innerHTML = COMBOS.map(function(c){
+    return '<div class="combo"><h4>'+esc(c.t)+'</h4><p>'+esc(c.d)+'</p></div>';
+  }).join('');
+
+  /* status da relacao */
+  if(estado.relacao.status){
+    var inp = $('input[name="status-relacao"][value="'+estado.relacao.status+'"]');
+    if(inp) inp.checked = true;
+    aplicarStatusRelacao(estado.relacao.status);
+  }
+  if(estado.relacao.papel){
+    var pin = $('input[name="papel-ciclo"][value="'+estado.relacao.papel+'"]');
+    if(pin) pin.checked = true;
+    $('#feedback-papel').textContent = FEEDBACK_PAPEL[estado.relacao.papel];
+  }
+}
+
+function aplicarStatusRelacao(status){
+  $('#bloco-relacao').hidden = false;
+  $('#nota-contexto').textContent = status === 'em'
+    ? 'Perfeito. Responda pensando na relação de agora, com o casal que vocês são hoje, não com o casal que vocês eram no começo.'
+    : 'Sem problema nenhum. O padrão de apego não some quando a gente está solteiro, ele só fica sem palco. Responda pensando na sua relação mais marcante, ou no conjunto delas: o que se repetiu é o que interessa aqui.';
+  montarCamposCiclo(status);
+  montarCamposReflexao(status);
+}
+
+function montarCamposCiclo(status){
+  var rot = ROTULOS_CICLO[status] || ROTULOS_CICLO.em;
+  $('#campos-ciclo').innerHTML = rot.map(function(r, i){
+    return '<div class="campo" id="campo-ciclo-'+i+'">'+
+      '<label for="ciclo-'+i+'">'+esc(r)+'</label>'+
+      '<textarea id="ciclo-'+i+'" rows="3" placeholder="Escreva com suas palavras...">'+esc(estado.relacao.ciclo[i]||'')+'</textarea>'+
+    '</div>';
+  }).join('');
+  $$('#campos-ciclo textarea').forEach(function(ta, i){
+    ta.addEventListener('input', function(){ estado.relacao.ciclo[i] = ta.value; salvar(); });
+    ta.addEventListener('focus', function(){ destacarPasso(i); });
+  });
+}
+
+function montarCamposReflexao(status){
+  var rot = ROTULOS_REFLEXAO[status] || ROTULOS_REFLEXAO.em;
+  $('#campos-reflexao').innerHTML = rot.map(function(r, i){
+    return '<div class="campo">'+
+      '<label for="reflexao-'+i+'">'+esc(r)+'</label>'+
+      '<textarea id="reflexao-'+i+'" rows="4" placeholder="Escreva com suas palavras...">'+esc(estado.relacao.reflexao[i]||'')+'</textarea>'+
+    '</div>';
+  }).join('');
+  $$('#campos-reflexao textarea').forEach(function(ta, i){
+    ta.addEventListener('input', function(){ estado.relacao.reflexao[i] = ta.value; salvar(); });
+  });
+}
+
+function destacarPasso(i){
+  $$('.no-ciclo').forEach(function(n){ n.classList.toggle('ativo', parseInt(n.dataset.passo,10) === i); });
+  $$('#campos-ciclo .campo').forEach(function(c, k){ c.classList.toggle('destacado', k === i); });
+}
+
+$$('input[name="status-relacao"]').forEach(function(inp){
+  inp.addEventListener('change', function(){
+    estado.relacao.status = inp.value; salvar();
+    aplicarStatusRelacao(inp.value);
+  });
+});
+$$('input[name="papel-ciclo"]').forEach(function(inp){
+  inp.addEventListener('change', function(){
+    estado.relacao.papel = inp.value; salvar();
+    $('#feedback-papel').textContent = FEEDBACK_PAPEL[inp.value];
+  });
+});
+$$('.no-ciclo').forEach(function(no){
+  function abrir(){
+    var i = parseInt(no.dataset.passo,10);
+    destacarPasso(i);
+    var ta = document.getElementById('ciclo-'+i);
+    if(ta) ta.focus();
+  }
+  no.addEventListener('click', abrir);
+  no.addEventListener('keydown', function(ev){
+    if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); abrir(); }
+  });
+});
+
+/* ============================================================
+   10. MODULO 5  -  PRATICAS DE SEGURANCA CONQUISTADA
+   grupo: 'ansioso' | 'evitativo' | 'comum' | 'seguro'
+   ============================================================ */
+var PRATICAS = [
+  { id:'p-ans-1', grupo:'ansioso', titulo:'A pausa dos vinte minutos',
+    porque:'Quando o sistema de apego hiperativa, o corpo entra em estado de alarme e a fisiologia leva cerca de vinte minutos para baixar. Falar antes disso é conversar com o alarme, não com a pessoa.',
+    passos:['Aprenda a reconhecer o seu primeiro sinal corporal: aperto no peito, mãos geladas, urgência de resolver agora.',
+            'Diga em voz alta o que está acontecendo: eu estou ativado, preciso de vinte minutos e eu volto.',
+            'Faça algo que ocupe o corpo: caminhar, lavar o rosto com água fria, alongar, respirar devagar.',
+            'Volte no horário que você prometeu. Isso não é detalhe, é o que impede a pausa de virar abandono para o outro.',
+            'Só então diga o que precisava dizer.'],
+    tarefa:'Usar a pausa uma vez nesta semana e voltar exatamente no horário combinado.' },
+  { id:'p-ans-2', grupo:'ansioso', titulo:'A janela de incerteza',
+    porque:'Checar alivia por alguns minutos e ensina o cérebro que a calma só vem de fora. Adiar a checagem em pequenas doses aumenta, aos poucos, sua tolerância à dúvida.',
+    passos:['Quando bater a vontade de checar o celular, o online ou a rede social da pessoa, marque dez minutos no relógio.',
+            'Nesses dez minutos, escreva em uma frase o que você teme que esteja acontecendo.',
+            'Escreva ao lado uma segunda hipótese, igualmente possível e mais banal.',
+            'Passados os dez minutos, veja se a urgência mudou de tamanho.',
+            'Semana que vem, tente quinze minutos.'],
+    tarefa:'Adiar três checagens ao longo da semana e anotar o que aconteceu com a urgência.' },
+  { id:'p-ans-3', grupo:'ansioso', titulo:'Pedir sem acusar',
+    porque:'Reclamação sobre o caráter do outro ativa defesa. Pedido sobre a própria necessidade ativa aproximação. É a mesma dor dita de dois jeitos, com resultados opostos.',
+    passos:['Descreva o fato, sem adjetivos: quando você chegou e foi direto para o celular.',
+            'Nomeie a emoção, sem terceirizar: eu senti solidão.',
+            'Diga o medo por baixo: eu penso que deixei de ser interessante para você.',
+            'Faça um pedido concreto e pequeno: eu queria dez minutos de conversa antes de a gente se dispersar.'],
+    frases:['<strong>Modelo:</strong> Quando você <em>[fato observável]</em>, eu sinto <em>[emoção]</em>, porque por dentro eu penso <em>[o medo]</em>. O que me ajudaria é <em>[pedido concreto]</em>.',
+            '<strong>Em vez de:</strong> você nunca liga para mim. <strong>Tente:</strong> quando você demora a responder, eu fico com medo de estar sobrando. Me avisar que está corrido já resolve.'],
+    tarefa:'Fazer um pedido nesse formato uma vez nesta semana, mesmo que sobre algo pequeno.' },
+  { id:'p-ans-4', grupo:'ansioso', titulo:'Fontes internas de segurança',
+    porque:'Quando a relação é a única reguladora do seu humor, ela carrega um peso que nenhuma relação sustenta. Ampliar as fontes de regulação diminui a pressão sobre o vínculo e, curiosamente, melhora o vínculo.',
+    passos:['Liste três coisas que te acalmam e não dependem da outra pessoa: corpo em movimento, um amigo, música, natureza, uma prática espiritual.',
+            'Agende duas delas na semana, com dia e hora, como você agendaria um compromisso.',
+            'Repare no que acontece com a sua urgência nos dias em que essas âncoras aconteceram.'],
+    tarefa:'Cumprir dois compromissos comigo mesmo nesta semana, marcados na agenda.' },
+
+  { id:'p-evi-1', grupo:'evitativo', titulo:'Micro-doses de vulnerabilidade',
+    porque:'A desativação foi aprendida porque abrir dava problema. O caminho de volta não é abrir tudo de uma vez, é acumular pequenas experiências novas em que abrir deu certo.',
+    passos:['Escolha algo verdadeiro e de baixo risco para contar: um cansaço, uma insegurança do trabalho, uma saudade.',
+            'Conte em uma ou duas frases, sem introdução e sem pedir desculpa por estar falando.',
+            'Repare no que acontece dentro de você depois. Provavelmente vem um impulso de recuar: apenas observe.',
+            'Repita com algo um pouco mais próximo do centro na semana seguinte.'],
+    tarefa:'Contar uma coisa verdadeira e pequena para a pessoa, três vezes nesta semana.' },
+  { id:'p-evi-2', grupo:'evitativo', titulo:'Nomear a emoção',
+    porque:'Dar nome ao que se sente reduz a ativação do circuito de ameaça no cérebro. Quem cresceu desativando costuma ter um vocabulário emocional curto, e vocabulário se treina.',
+    passos:['Três vezes por dia, pare por trinta segundos e complete: agora eu estou sentindo...',
+            'Use uma palavra mais precisa que bem, mal ou cansado. Tente irritado, aliviado, sozinho, apreensivo, tocado.',
+            'Não é preciso fazer nada com a emoção. Só nomear já é o exercício.',
+            'Uma vez na semana, diga uma dessas palavras em voz alta para a pessoa.'],
+    tarefa:'Nomear uma emoção em voz alta para o meu par, pelo menos uma vez.' },
+  { id:'p-evi-3', grupo:'evitativo', titulo:'Cinco minutos a mais',
+    porque:'O impulso de sair da conversa aparece no pico da ativação. Quem consegue permanecer um pouco além do pico descobre, na prática, que o desconforto desce sozinho, e é essa descoberta que reprograma o sistema.',
+    passos:['Quando vier a vontade de encerrar a conversa, avise: eu quero sair daqui agora, mas vou ficar mais cinco minutos.',
+            'Continue respirando devagar, com a expiração mais longa que a inspiração.',
+            'Se cinco for demais, comece com dois. O número importa menos que a experiência de ficar.',
+            'Se precisar sair de verdade, use a pausa combinada e marque a volta.'],
+    tarefa:'Permanecer cinco minutos a mais em uma conversa difícil, uma vez nesta semana.' },
+  { id:'p-evi-4', grupo:'evitativo', titulo:'Pedir ajuda em algo pequeno',
+    porque:'Pedir é o comportamento que a desativação mais evita, e é justamente o que constrói a experiência de que precisar do outro pode terminar bem.',
+    passos:['Escolha algo concreto e sem drama: me ajuda a decidir isso, vem comigo nesse compromisso, me faz companhia enquanto eu resolvo.',
+            'Peça sem justificar demais e sem transformar em favor gigante.',
+            'Quando a pessoa atender, deixe registrado em voz alta: foi bom ter você nisso.'],
+    tarefa:'Fazer dois pedidos pequenos e concretos ao longo da semana.' },
+
+  { id:'p-com-1', grupo:'comum', titulo:'Respiração de ritmo acalmante',
+    porque:'A Terapia Focada na Compaixão trabalha com três sistemas emocionais: ameaça, busca e acalmamento. A respiração lenta e regular ativa o sistema de acalmamento e afiliação, que é a base fisiológica da sensação de segurança.',
+    passos:['Sente com os dois pés no chão e ombros soltos. Se for confortável, feche os olhos.',
+            'Inspire pelo nariz contando até quatro e expire contando até seis. A expiração mais longa é o que aciona o freio do corpo.',
+            'Mantenha por dois minutos, sem cobrar perfeição. A mente vai dispersar, e trazer de volta faz parte.',
+            'Termine colocando a mão sobre o peito e dizendo mentalmente: isto é um momento difícil, e eu posso me acompanhar nele.'],
+    tarefa:'Praticar dois minutos por dia, de preferência no mesmo horário.' },
+  { id:'p-com-2', grupo:'comum', titulo:'Tornar-se a própria base segura',
+    porque:'Quem se trata com dureza mantém o sistema de ameaça ligado o tempo todo, e um sistema de ameaça ligado busca proteção o tempo todo. Autocompaixão não é passar a mão na cabeça: é reduzir o alarme interno para conseguir agir melhor.',
+    passos:['Pense em uma situação recente em que você reagiu de um jeito de que não se orgulha.',
+            'Escreva uma frase descrevendo o que você sentiu ali, sem julgar a reação.',
+            'Escreva o que você diria para um amigo querido que tivesse feito exatamente a mesma coisa.',
+            'Leia a segunda frase em voz alta, para si mesmo. O estranhamento é esperado nas primeiras vezes.'],
+    tarefa:'Escrever esse trio de frases duas vezes nesta semana.' },
+  { id:'p-com-3', grupo:'comum', titulo:'A conversa de reconexão',
+    porque:'Sue Johnson observou que casais se reconectam quando conseguem falar do medo por baixo da reação, e não da reação em si. É o momento em que um pede e o outro responde que estruturalmente muda o vínculo.',
+    passos:['Escolha um momento calmo, nunca no meio da briga. Combine vinte minutos sem celular.',
+            'Cada um fala por vez, e o outro só escuta, sem se defender e sem corrigir os fatos.',
+            'Quem fala usa três frases: quando acontece isso entre nós, por dentro eu sinto isso, e o que eu mais preciso de você é isso.',
+            'Quem escuta responde uma coisa só: o que eu entendi que você precisa é isso. Está certo?',
+            'Trocar os papéis. Encerrar sem tentar resolver tudo hoje.'],
+    frases:['<strong>Para começar sem acusação:</strong> eu queria te contar uma coisa que eu sinto quando a gente briga, não para você resolver, só para você saber.'],
+    tarefa:'Marcar e fazer uma conversa de vinte minutos nesta semana.' },
+  { id:'p-com-4', grupo:'comum', titulo:'Interromper o ciclo em tempo real',
+    porque:'O ciclo perseguir e afastar se sustenta porque cada um enxerga o outro como o problema. Quando o casal passa a enxergar o ciclo como o problema, os dois saem da posição de adversários.',
+    passos:['Dê um nome ao seu ciclo, com bom humor se possível: a dança, o furacão, o de sempre.',
+            'Combinem uma frase de emergência que qualquer um pode dizer: acho que a gente entrou no ciclo de novo.',
+            'A frase não resolve a discussão. Ela só marca uma pausa de dez minutos.',
+            'Depois da pausa, cada um diz uma frase sobre o que sentiu, antes de voltar ao assunto.'],
+    tarefa:'Combinar a frase de emergência e usá-la pelo menos uma vez.' },
+
+  { id:'p-seg-1', grupo:'seguro', titulo:'Manutenção: o ritual semanal de checagem',
+    porque:'Segurança não é um estado permanente, é uma prática que se mantém. Casais que conversam sobre a relação fora dos momentos de crise acumulam menos ressentimento silencioso.',
+    passos:['Escolha um horário fixo na semana, de vinte a trinta minutos.',
+            'Três perguntas: o que foi bom entre nós esta semana, o que ficou atravessado e o que eu preciso da próxima.',
+            'Nada de resolver logística nesse espaço. Contas e agenda ficam para outro momento.'],
+    tarefa:'Realizar um ritual de checagem nesta semana.' },
+  { id:'p-seg-2', grupo:'seguro', titulo:'Ser porto seguro sem virar terapeuta',
+    porque:'Quem tem funcionamento mais seguro costuma servir de regulador para o parceiro. Isso ajuda enquanto é presença, e adoece quando vira responsabilidade por administrar as emoções do outro.',
+    passos:['Ofereça presença, não solução: estou aqui, me conta.',
+            'Valide antes de argumentar. Validar não é concordar, é reconhecer que faz sentido a pessoa sentir aquilo.',
+            'Marque seus limites com clareza e sem culpa: eu quero muito te ouvir, e agora eu não tenho condição. Podemos às oito?',
+            'Repare quando o cuidado virou vigilância. Ali já não é apoio, é sobrecarga.'],
+    tarefa:'Praticar uma validação antes de dar qualquer conselho, três vezes na semana.' }
+];
+
+var MARCOS = [
+  { min:0,   txt:'Marque as práticas conforme for concluindo. Sem pressa e sem cobrança.' },
+  { min:25,  txt:'Você começou. É exatamente assim que apego muda: por repetição pequena, não por decisão grandiosa.' },
+  { min:50,  txt:'Metade do caminho desta semana. Repare se alguma coisa já mudou no seu corpo, antes mesmo de mudar na relação.' },
+  { min:75,  txt:'Quase tudo marcado. E note: não foi preciso fazer nada com perfeição para chegar até aqui.' },
+  { min:100, txt:'Semana completa. Se puder, escolha uma prática para repetir na semana que vem. O que consolida não é variedade, é constância.' }
+];
+
+/* define quais grupos entram no plano da pessoa */
+function gruposRecomendados(){
+  var r = estado.resultado;
+  var g = ['comum'];
+  if(!r){ g.push('seguro'); return g; }
+  if(r.ansiedade >= 40) g.push('ansioso');
+  if(r.evitacao >= 40) g.push('evitativo');
+  if(g.length === 1) g.push('seguro');
+  return g;
+}
+function noPlano(p){
+  return gruposRecomendados().indexOf(p.grupo) !== -1 || estado.praticas.extras.indexOf(p.id) !== -1;
+}
+function praticasDoPlano(){ return PRATICAS.filter(noPlano); }
+
+function montarPraticas(){
+  var r = estado.resultado;
+  $('#aviso-sem-questionario').hidden = !!r;
+  var recomendados = gruposRecomendados();
+
+  var intro = '';
+  if(r){
+    intro = '<div class="cartao creme"><p class="pequeno" style="margin:0"><strong>Seu plano.</strong> '+
+      'Com ansiedade em '+r.ansiedade+' e evitação em '+r.evitacao+', selecionei as práticas que costumam fazer mais diferença para o seu funcionamento. '+
+      'As demais ficam disponíveis logo abaixo, e você pode acrescentar qualquer uma ao seu plano.</p></div>';
+  }
+
+  var html = intro;
+  PRATICAS.forEach(function(p){
+    var dentro = noPlano(p);
+    var feita = !!estado.praticas.feitas[p.id];
+    var tag = p.grupo === 'comum' ? '<span class="tag comum">Para todo mundo</span>'
+            : (dentro ? '<span class="tag recomendada">Recomendada para você</span>' : '<span class="tag opcional">Outro polo</span>');
+    html += '<article class="pratica'+(dentro ? '' : ' fora-do-plano')+'" id="pratica-'+p.id+'">'+
+      tag+
+      '<h3>'+esc(p.titulo)+'</h3>'+
+      '<p class="porque">Por que funciona: '+esc(p.porque)+'</p>'+
+      '<p class="pequeno" style="font-weight:700;margin-bottom:.3rem">Como fazer</p>'+
+      '<ol>'+p.passos.map(function(s){ return '<li>'+esc(s)+'</li>'; }).join('')+'</ol>'+
+      (p.frases ? '<div class="frases-modelo">'+p.frases.map(function(f){ return '<p>'+f+'</p>'; }).join('')+'</div>' : '')+
+      '<div class="tarefa"><strong>Tarefa da semana</strong>'+esc(p.tarefa)+'</div>'+
+      (dentro
+        ? '<label class="check-linha" style="margin-top:.7rem;border:none"><input type="checkbox" data-p="'+p.id+'"'+(feita?' checked':'')+'><span>Concluí esta prática nesta semana</span></label>'
+        : '<p style="margin-top:.8rem"><button class="btn btn-secundario" type="button" data-add="'+p.id+'">Adicionar ao meu plano</button></p>')+
+    '</article>';
+  });
+  $('#lista-praticas').innerHTML = html;
+
+  $$('#lista-praticas input[type=checkbox]').forEach(function(inp){
+    inp.addEventListener('change', function(){
+      estado.praticas.feitas[inp.dataset.p] = inp.checked; salvar();
+      atualizarProgressoPraticas();
+    });
+  });
+  $$('#lista-praticas button[data-add]').forEach(function(b){
+    b.addEventListener('click', function(){
+      if(estado.praticas.extras.indexOf(b.dataset.add) === -1) estado.praticas.extras.push(b.dataset.add);
+      salvar(); montarPraticas();
+      var el = document.getElementById('pratica-'+b.dataset.add);
+      if(el) el.scrollIntoView({block:'center'});
+    });
+  });
+  atualizarProgressoPraticas();
+}
+
+function progressoPraticas(){
+  var plano = praticasDoPlano();
+  var feitas = plano.filter(function(p){ return estado.praticas.feitas[p.id]; }).length;
+  return { total:plano.length, feitas:feitas, pct: plano.length ? Math.round(feitas/plano.length*100) : 0 };
+}
+
+function atualizarProgressoPraticas(){
+  var p = progressoPraticas();
+  var barra = $('#barra-praticas');
+  if(barra) barra.style.width = p.pct+'%';
+  var wrap = $('#barra-praticas-wrap');
+  if(wrap) wrap.setAttribute('aria-valuenow', p.pct);
+  var txt = $('#texto-progresso-praticas');
+  if(txt) txt.textContent = p.feitas+' de '+p.total+' práticas marcadas nesta semana.';
+  var marco = MARCOS[0];
+  MARCOS.forEach(function(m){ if(p.pct >= m.min) marco = m; });
+  var el = $('#marco-praticas');
+  if(el) el.textContent = marco.txt;
+}
+
+/* ============================================================
+   11. TELA DE RESUMO
+   ============================================================ */
+function montarResumo(){
+  var alvo = $('#resumo-conteudo');
+  var r = estado.resultado;
+  var html = '';
+
+  if(r){
+    var cx = 46 + (r.evitacao/100)*258, cy = 282 - (r.ansiedade/100)*258;
+    html += '<div class="resumo-bloco">'+
+      '<h3>Sua tendência predominante</h3>'+
+      '<div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">'+
+        '<span class="forma" style="flex:0 0 56px">'+FORMAS[r.estilo]+'</span>'+
+        '<div style="flex:1 1 240px"><p style="font-family:var(--fonte-titulo);font-size:1.5rem;color:var(--teal);margin:0 0 .2rem">'+esc(NOMES[r.estilo])+'</p>'+
+        '<p class="pequeno" style="margin:0">Ansiedade de apego: <strong>'+r.ansiedade+'</strong> em 100, faixa '+faixa(r.ansiedade)+'. Evitação de apego: <strong>'+r.evitacao+'</strong> em 100, faixa '+faixa(r.evitacao)+'.</p></div>'+
+      '</div>'+
+      '<svg viewBox="0 0 340 320" role="img" aria-label="Sua posição nos eixos de ansiedade e evitação" style="margin-top:1rem">'+
+        '<rect x="46" y="153" width="129" height="129" fill="#E2EFED"/><rect x="46" y="24" width="129" height="129" fill="#FBE7E1"/>'+
+        '<rect x="175" y="153" width="129" height="129" fill="#EDE8F7"/><rect x="175" y="24" width="129" height="129" fill="#F3EADF"/>'+
+        '<rect x="46" y="24" width="258" height="258" fill="none" stroke="#14514E" stroke-width="1.5"/>'+
+        '<g font-family="DM Sans, sans-serif" font-size="10" fill="#5B514C" text-anchor="middle">'+
+          '<text x="110" y="270">Seguro</text><text x="110" y="40">Ansioso</text>'+
+          '<text x="240" y="270">Evitativo</text><text x="240" y="40">Desorganizado</text></g>'+
+        '<g font-family="DM Sans, sans-serif" font-size="11" fill="#14514E">'+
+          '<text x="175" y="304" text-anchor="middle">Evitação</text>'+
+          '<text x="16" y="153" text-anchor="middle" transform="rotate(-90 16 153)">Ansiedade</text></g>'+
+        '<circle cx="'+cx+'" cy="'+cy+'" r="15" fill="#E98A7A" fill-opacity=".3"/>'+
+        '<circle cx="'+cx+'" cy="'+cy+'" r="6.5" fill="#B94A35" stroke="#fff" stroke-width="2"/>'+
+      '</svg>'+
+    '</div>';
+  } else {
+    html += '<div class="cartao sal"><p class="pequeno" style="margin:0">Você ainda não respondeu o questionário do Módulo 3. Volte lá quando quiser para ver sua posição nos dois eixos.</p></div>';
+  }
+
+  /* ciclo escrito pela pessoa */
+  var temCiclo = estado.relacao.ciclo.some(function(t){ return t && t.trim(); });
+  if(temCiclo){
+    var rot = ROTULOS_CICLO[estado.relacao.status || 'em'];
+    html += '<div class="resumo-bloco"><h3>O ciclo que eu identifiquei</h3><ul class="lista-limpa">'+
+      estado.relacao.ciclo.map(function(t, i){
+        if(!t || !t.trim()) return '';
+        return '<li><strong>'+esc(rot[i].split('.')[0])+'.</strong> '+esc(t)+'</li>';
+      }).join('')+'</ul></div>';
+  }
+
+  /* praticas */
+  var p = progressoPraticas();
+  var plano = praticasDoPlano();
+  html += '<div class="resumo-bloco"><h3>Minhas práticas da semana</h3>'+
+    '<p class="pequeno texto-suave">'+p.feitas+' de '+p.total+' marcadas, '+p.pct+' por cento do plano.</p>'+
+    '<ul class="lista-limpa">'+plano.map(function(pr){
+      var feita = !!estado.praticas.feitas[pr.id];
+      return '<li>'+(feita ? '<span aria-hidden="true">✓</span> ' : '<span aria-hidden="true">○</span> ')+
+        '<strong>'+esc(pr.titulo)+'</strong><br><span class="texto-suave">'+esc(pr.tarefa)+'</span></li>';
+    }).join('')+'</ul></div>';
+
+  html += '<div class="cartao lav"><p class="pequeno" style="margin:0"><strong>Uma última coisa.</strong> '+
+    'Se você se reconheceu em algum padrão difícil, o que você acabou de fazer não foi descobrir um defeito. Foi identificar uma estratégia que um dia protegeu você e que hoje cobra um preço alto. '+
+    'Estratégias podem ser atualizadas. É disso que a psicoterapia trata.</p></div>';
+
+  alvo.innerHTML = html;
+}
+
+/* ============================================================
+   12. IMPRESSAO / PDF
+   ============================================================ */
+function montarAreaImpressao(){
+  var r = estado.resultado, p = progressoPraticas();
+  var hoje = new Date().toLocaleDateString('pt-BR');
+  var html = '<h1>Meu retrato de apego</h1>'+
+    '<p class="bloco-imp"><em>Resumo gerado em '+hoje+' pelo recurso interativo sobre teoria do apego da Psicoterapia e Afins.</em></p>';
+
+  if(r){
+    html += '<div class="bloco-imp"><h2>Tendência predominante</h2>'+
+      '<p><strong>'+esc(NOMES[r.estilo])+'</strong></p>'+
+      '<p>Ansiedade de apego: '+r.ansiedade+' em 100 (faixa '+faixa(r.ansiedade)+').<br>'+
+      'Evitação de apego: '+r.evitacao+' em 100 (faixa '+faixa(r.evitacao)+').</p>'+
+      '<p>'+esc(FRASES_ESTILO[r.estilo])+'</p>'+
+      (pertoDoCentro(r) ? '<p><em>Pelo menos um dos escores ficou perto do meio da escala, na fronteira entre dois quadrantes. O rótulo deve ser lido com reserva.</em></p>' : '')+
+      '</div>';
+  }
+  if(estado.relacao.papel && FEEDBACK_PAPEL[estado.relacao.papel]){
+    html += '<div class="bloco-imp"><h2>Meu movimento no ciclo</h2><p>'+esc(FEEDBACK_PAPEL[estado.relacao.papel])+'</p></div>';
+  }
+  var rot = ROTULOS_CICLO[estado.relacao.status || 'em'];
+  if(estado.relacao.ciclo.some(function(t){ return t && t.trim(); })){
+    html += '<div class="bloco-imp"><h2>O ciclo que eu identifiquei</h2>';
+    estado.relacao.ciclo.forEach(function(t, i){
+      if(t && t.trim()) html += '<p><strong>'+esc(rot[i])+'</strong><br>'+esc(t)+'</p>';
+    });
+    html += '</div>';
+  }
+  var rr = ROTULOS_REFLEXAO[estado.relacao.status || 'em'];
+  if(estado.relacao.reflexao.some(function(t){ return t && t.trim(); })){
+    html += '<div class="bloco-imp"><h2>Minhas reflexões</h2>';
+    estado.relacao.reflexao.forEach(function(t, i){
+      if(t && t.trim()) html += '<p><strong>'+esc(rr[i])+'</strong><br>'+esc(t)+'</p>';
+    });
+    html += '</div>';
+  }
+  html += '<div class="bloco-imp"><h2>Minhas práticas da semana ('+p.feitas+' de '+p.total+')</h2><ul>';
+  praticasDoPlano().forEach(function(pr){
+    html += '<li>['+(estado.praticas.feitas[pr.id] ? 'x' : ' ')+'] <strong>'+esc(pr.titulo)+'</strong>: '+esc(pr.tarefa)+'</li>';
+  });
+  html += '</ul></div>';
+
+  html += '<div class="rodape-imp"><p>Este material é psicoeducativo e de autoconhecimento. Não é um teste psicológico validado, não realiza diagnóstico e não substitui avaliação ou acompanhamento profissional. '+
+    'Baseado no trabalho de Bowlby, Ainsworth, Main e Solomon, Hazan e Shaver, Bartholomew e Horowitz, Fraley e colaboradores, Mikulincer e Shaver, Sue Johnson e Paul Gilbert.</p>'+
+    '<p>Paula Rodrigues, psicóloga clínica. Psicoterapia e Afins, atendimento online para adultos no Brasil e na Europa.</p></div>';
+
+  $('#area-impressao').innerHTML = html;
+}
+
+$('#btn-imprimir').addEventListener('click', function(){
+  montarAreaImpressao();
+  window.print();
+});
+
+/* ============================================================
+   13. RECOMECAR DO ZERO
+   ============================================================ */
+$('#btn-reiniciar').addEventListener('click', function(){
+  var ok = window.confirm('Isso apaga todas as suas respostas e textos deste dispositivo. Não dá para desfazer. Quer continuar?');
+  if(!ok) return;
+  try{ if(TEM_STORAGE) window.localStorage.removeItem(CHAVE); }catch(e){}
+  memoriaVolatil = null;
+  estado = estadoInicial();
+  window.location.reload();
+});
+
+/* ============================================================
+   14. INICIALIZACAO
+   ============================================================ */
+var telaSalva = estado.tela;
+
+montarMitos();
+montarEstilos();
+montarJogo();
+montarItens();
+montarModulo4();
+
+/* restaura o seletor de eixos do Modulo 1 */
+if(estado.eixos.si){ var e1 = $('input[name="eixo-si"][value="'+estado.eixos.si+'"]'); if(e1) e1.checked = true; }
+if(estado.eixos.outro){ var e2 = $('input[name="eixo-outro"][value="'+estado.eixos.outro+'"]'); if(e2) e2.checked = true; }
+atualizarEixos();
+
+/* restaura o resultado do questionario, se existir */
+if(estado.resultado) montarResultadoQuest();
+
+/* a jornada sempre abre na capa; quem ja tinha progresso ganha o atalho */
+if(telaSalva > 0 || temProgressoSalvo()){
+  var btn = $('#btn-continuar');
+  btn.hidden = false;
+  btn.textContent = telaSalva > 0 ? 'Continuar de onde parei ('+ROTULOS[telaSalva]+')' : 'Continuar de onde parei';
+  btn.addEventListener('click', function(){ irPara(telaSalva > 0 ? telaSalva : 1); });
+}
+irPara(0, true);
+
+})();
+</script>
+</body>
+</html>
